@@ -1,0 +1,16 @@
+<div class="wrap">
+    <div class="imgDiv">
+        <img [src]="img" class="img" [ngStyle]="{'width': width}">
+        <div class="tietKiem">
+            <span class="text">SAVE</span><br>
+            <span class="tien">AUD {{gia * 0.25}}</span>
+        </div>
+    </div>
+    <div class="chitiet">
+        <div class="mota">{{ten | prodsName}}</div>
+        <div class="gia">AUD {{gia}}</div>
+        <div class="giamgia">
+            <span class="gach">AUD {{gia * 0.75}}</span> 25%
+        </div>
+    </div>
+</div>

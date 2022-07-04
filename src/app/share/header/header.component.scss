@@ -1,0 +1,170 @@
+.anniversary {
+    height: 39.34px;
+
+    &__img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.lienhe {
+    background-color: rgb(20, 53, 195);
+    height: 40px;
+    align-items: center;
+
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+
+    &__2 {
+        display: flex;
+        justify-content: end;
+    }
+
+    &__link {
+        color: white;
+        text-decoration: none;
+
+        margin-right: 40px;
+
+        display: flex;
+
+        &__icon {
+            margin-right: 10px;
+        }
+
+        &__sdt {
+            color: red;
+        }
+    }
+
+}
+
+.navbar {
+    height: 100px;
+    padding: 0px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    gap: 20px;
+
+    align-items: center;
+
+    &__content {
+        &__search {
+            background-color: rgb(248, 248, 248);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            border: 1px solid rgb(235, 225, 225);
+
+            &__input {
+                background-color: rgb(248, 248, 248);
+                border-radius: 10px;
+                height: 40px;
+                border: none;
+                padding: 0px 10px;
+                box-sizing: border-box;
+                width: 100%;
+            }
+
+            &__input:focus {
+                outline: none;
+            }
+
+            &__btn {
+                height: 38px;
+                width: 38px;
+                background-color: rgb(20, 53, 195);
+                color: white;
+                border: none;
+                border-radius: 10px;
+                font-size: 1.2em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+        &__tag {
+            text-decoration: none;
+            color: gray;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1em;
+            
+            position: relative;
+
+            &__icon {
+                margin-bottom: 10px;
+                font-size: 2em;
+            }
+
+            // .text {
+            //     display: none;
+            // }
+
+            .divCart {
+                background-color: rgb(255, 255, 255);
+                width: 370px;
+                height: 370px;
+                position: absolute;
+                top: 56px;
+                right: 0px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 12px -5px #000000;
+                display: none;
+                background-image: url('https://i.imgur.com/Drj57qu.png');
+                background-size: 50%;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .divCart:hover {
+                display: block;
+            }
+
+            .divNoti {
+                background-color: rgb(255, 255, 255);
+                width: 370px;
+                height: 370px;
+                position: absolute;
+                top: 56px;
+                right: 0px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 12px -5px #000000;
+                display: none;
+                background-image: url('https://shopfront-cdn.tekoapis.com/static/e536f0592aa3c8b1.png');
+                background-size: 50%;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .divNoti:hover {
+                display: block;
+            }
+        }
+
+        &__tag:hover {
+            color: rgb(20, 53, 195);
+        }
+
+        &__tagCart:hover .divCart {
+            display: block;
+        }
+
+        &__tagNoti:hover .divNoti {
+            display: block;
+        }
+    }
+}

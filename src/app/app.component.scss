@@ -1,0 +1,48 @@
+app-pd-bar {
+    position: fixed;
+    top: 130px;
+    right: 50px;
+    z-index: 10;
+}
+.notice {
+    z-index: 10;
+    position: fixed;
+    bottom: 65px;
+    left: 50px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 0px 0px 10px 0px;
+
+    .text {
+        padding: 10px 5px;
+        text-align: center;
+        background-color: rgb(20, 53, 195);
+        border-radius: 5px;
+        display: none;
+        justify-content: end;
+        color: white;
+        font-size: 0.8em;
+        font-weight: bold;
+    }
+
+    .icon {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .showNotice {
+        background-image: url('https://sdk.pushdi.com/image/ico/ring-01.png');
+        background-size: cover;
+    }
+}
+
+.notice:hover .text{
+    display: flex;
+}
+
+.notice:hover {
+    cursor: pointer;
+}

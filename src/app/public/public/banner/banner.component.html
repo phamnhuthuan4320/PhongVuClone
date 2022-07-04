@@ -1,0 +1,10 @@
+<div class="wrap">
+    <div class="banner" [ngStyle]="{'grid-template-columns': grid, 'gap': gap}">
+        <div class="banner__content" *ngFor="let item of img">
+            <a href="">
+                <img [src]="item"
+                    class="img">
+            </a>
+        </div>
+    </div>
+</div>

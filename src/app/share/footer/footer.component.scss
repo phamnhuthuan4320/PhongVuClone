@@ -1,0 +1,135 @@
+.wrap {
+    background-color: white;
+}
+
+.hr {
+    height: 3px;
+    background-color: rgb(20, 53, 195);
+}
+
+.policy {
+    padding: 0px 50px 0px 50px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    &__content {
+        &__title {
+            font-weight: bold;
+            font-size: 1em;
+            line-height: 50px;
+        }
+
+        &__list {
+            ul {
+                list-style: none;
+                line-height: 25px;
+
+                li {
+                    a {
+                        color: rgb(90, 84, 84);
+                        text-decoration: none;
+                        font-size: 0.8em;
+
+                        .fa-facebook-official{
+                            color: rgb(20, 53, 195);
+                        }
+
+                        .fa-youtube-play {
+                            color: red;
+                        }
+
+                        .fa-users {
+                            color: rgb(75, 102, 221);
+                        }
+
+                        .sdt {
+                            color: red;
+                        }
+                    }
+
+                    a:hover {
+                        color: rgb(20, 53, 195);
+                    }
+
+                    .text {
+                        color: rgb(90, 84, 84);
+                        font-size: 0.8em;
+                    }
+
+                    .mail {
+                        color: rgb(75, 102, 221);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.payment{
+    padding: 0px 50px 20px 50px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+
+    &__div {
+        &__title {
+            font-weight: bold;
+            font-size: 1em;
+            line-height: 50px;
+        }
+
+        &__content {
+            display: flex;
+
+            &__img {
+                width: 80%;
+            }
+
+            a {
+                color: rgb(90, 84, 84);
+                text-decoration: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-right: 20px;
+
+                .fa {
+                    font-size: 2em;
+                    line-height: 1.5em;
+                }
+
+                .text {
+                    font-size: 0.8em;
+                }
+            }
+
+            a:hover .text {
+                color: rgb(75, 102, 221);
+            }
+        }
+    }
+}
+
+.contact {
+    padding: 40px 50px 40px 50px;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    background-color: rgb(233, 233, 233);
+
+    &__div {
+        .title {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            color: rgb(90, 84, 84);
+            font-size: 0.8em;
+            line-height: 1.6em;
+        }
+
+        .text {
+            line-height: 1.6em;
+        }
+    }
+}

@@ -1,0 +1,90 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+    
+    .bar {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        margin: 0px 0px 10px 0px;
+
+        div {
+            margin: 0px 5px;
+        }
+
+        .text {
+            padding: 10px 5px;
+            text-align: center;
+            background-color: rgb(20, 53, 195);
+            border-radius: 5px;
+            display: none;
+            justify-content: end;
+            color: white;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .hotline {
+            background-image: url('https://sdk-vn.pushdi.com/image/maxlead/icon-phone-s2.svg');
+            background-size: cover;
+        }
+
+        .email {
+            background-image: url('https://sdk-vn.pushdi.com/image/maxlead/icon-mail-s2.svg');
+            background-size: cover;
+        }
+
+        .showroom {
+            background-image: url('https://sdk-vn.pushdi.com/image/maxlead/icon-map-s2.svg');
+            background-size: cover;
+        }
+
+        .like {
+            background-image: url('https://sdk-vn.pushdi.com/image/maxlead/icon-fanpage-s2.svg');
+            background-size: cover;
+        }
+
+        .top {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            font-weight: normal;
+        }
+
+        .mess {
+            background-image: url('https://shopfront-cdn.tekoapis.com/static/a8e347d31db4d701.png');
+            background-size: cover;
+        }
+
+        .iconMess {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+        }
+    }
+
+    .bar:hover .text{
+        display: flex;
+    }
+
+    .bar:hover {
+        cursor: pointer;
+    }
+
+    .barTop {
+        margin-top: 55px;
+
+        a {
+            text-decoration: none;
+        }
+    }
+}

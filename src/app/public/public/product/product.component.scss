@@ -1,0 +1,75 @@
+.wrap {
+    background-color: rgb(255, 255, 255);
+    padding: 12px;
+    height: 100%;
+
+    .imgDiv {
+        position: relative;
+        width: 100%;
+        height: 70%;
+        box-sizing: border-box;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+
+        .img {
+            transition: all 750ms;
+        }
+
+        .img:hover {
+            transform: scale(1.05);
+            transition: all 750ms;
+        }
+
+        .tietKiem {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            background: linear-gradient(to right, #6A50CE 0%, #1B68A4 50%, #B6C53A 100%);
+            border-radius: 0px 3px 0px 0px;
+            padding: 2px 5px 3px 5px;
+            font-size: 0.7em;
+            font-weight: bold;
+            line-height: 1.5em;
+
+            .text {
+                color: yellow;
+            }
+
+            .tien {
+                color: white;
+            }
+        }
+    }
+
+    .chitiet {
+        margin-top: 5px;
+        height: 28%;
+
+        .mota {
+            font-size: 0.8em;
+            color: rgb(117, 117, 117);   
+            line-height: 1.2em;         
+        }
+
+        .gia {
+            margin-top: 10px;
+            font-size: 0.8em;
+            font-weight: bold;
+            color: rgb(20, 53, 195);
+        }
+
+        .giamgia {
+            margin-top: 7px;
+            font-size: 0.8em;
+            color: rgb(20, 53, 180);
+
+            .gach {
+                text-decoration: line-through;
+                color: gray;
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+<div class="wrap">
+    <div class="watch">
+        <span class="cate">{{title}}</span>
+        <a href="">Watch all ></a>
+    </div>
+    <div class="content">
+        <div class="imgDiv">
+            <a href="">
+                <img [src]="bigImg" class="img">
+            </a>
+        </div>
+        <div class="prods">
+            <div class="prod" *ngFor="let prod of prods">
+                <div class="text">
+                    <span class="title">{{prod.name}}</span>
+                    <span class="des">Good {{prod.name}}</span>
+                </div>
+                <div class="prodImgDiv">
+                    <img [src]="prod.img" class="prodImg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

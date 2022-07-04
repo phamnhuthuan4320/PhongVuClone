@@ -1,0 +1,129 @@
+.wrap {
+    margin: 0px 20px 30px 20px;
+    height: 420px;
+    border-radius: 10px;
+
+    .tab {
+        height: 65px;
+        border-radius: 10px 10px 0px 0px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: white;
+
+        &__div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px 10px 0px 0px;
+            background-color: rgb(20, 53, 195);
+            font-weight: bold;
+            font-size: 1.5em;
+            color: white;
+        }
+
+        &__divChoose {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px 10px 0px 0px;
+            background-color: rgb(20, 53, 195);
+            font-weight: bold;
+            font-size: 1.5em;
+            color: gray;
+            background-color: rgb(250, 250, 250);
+        }
+
+        &__divChoose:hover {
+            cursor: pointer;
+        }
+
+        &__div:hover {
+            cursor: pointer;
+        }
+    }
+
+    .watch {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding: 30px;
+        height: 50px;
+        box-sizing: border-box;
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 0.8em;
+        }
+
+        a:hover {
+            color: white;
+        }
+    }
+
+    .content {
+        height: 296px;
+        padding: 0px 15px 15px 15px;
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    .prod-a {
+        text-decoration: none;
+    }
+}
+
+::ng-deep .swiper-pagination {
+    display: none;
+}
+
+::ng-deep .swiper-button-prev {
+    left: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 0% 50% 50% 0% ;
+    display: none;
+}
+
+::ng-deep .swiper-button-prev:after {
+    width: 50px;
+    height: 50px;
+    border-radius: 0% 50% 50% 0% ;
+    background-color: gray;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+    color: black;
+    font-weight: bold;
+}
+
+::ng-deep .swiper-button-next {
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50% 0% 0% 50%;
+    display: none;
+}
+
+::ng-deep .swiper-button-next:after {
+    width: 50px;
+    height: 50px;
+    border-radius: 50% 0% 0% 50%;
+    background-color: gray;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+    color: black;
+    font-weight: bold;
+}
+
+::ng-deep .wrap:hover .swiper-button-prev{
+    display: flex;
+}
+
+::ng-deep .wrap:hover .swiper-button-next{
+    display: flex;
+}

@@ -1,0 +1,98 @@
+.wrap {
+    margin: 0px 20px 30px 20px;
+    height: 420px;
+    border-radius: 10px;
+    background-image: url('https://lh3.googleusercontent.com/mPghhPTsWOQPHOxrgRsD0ZkPBvj4RgMxXfdCoHYtkGeWq7N2CQspC2Ycx2l00Iw8OAK8IDyoWRU0ByqQl_RSmf1OxAHx5qPg=w1232');
+
+    .watch {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+        height: 50px;
+        box-sizing: border-box;
+        border-bottom: 1px solid white;
+
+        .cate {
+            font-weight: bold;
+            font-size: 2em;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 0.8em;
+        }
+
+        a:hover {
+            color: white;
+        }
+    }
+
+    .content {
+        height: 361px;
+        padding: 15px 15px 15px 15px;
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    .prod-a {
+        text-decoration: none;
+    }
+}
+
+::ng-deep .swiper-pagination {
+    display: none;
+}
+
+::ng-deep .swiper-button-prev {
+    left: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 0% 50% 50% 0% ;
+    display: none;
+}
+
+::ng-deep .swiper-button-prev:after {
+    width: 50px;
+    height: 50px;
+    border-radius: 0% 50% 50% 0% ;
+    background-color: gray;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+    color: black;
+    font-weight: bold;
+}
+
+::ng-deep .swiper-button-next {
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50% 0% 0% 50%;
+    display: none;
+}
+
+::ng-deep .swiper-button-next:after {
+    width: 50px;
+    height: 50px;
+    border-radius: 50% 0% 0% 50%;
+    background-color: gray;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+    color: black;
+    font-weight: bold;
+}
+
+::ng-deep .wrap:hover .swiper-button-prev{
+    display: flex;
+}
+
+::ng-deep .wrap:hover .swiper-button-next{
+    display: flex;
+}
