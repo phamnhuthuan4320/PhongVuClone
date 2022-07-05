@@ -7,6 +7,17 @@ export class productDetail {
         price: number;
         quantity: number;
         image: string;
+        galleries: [
+            {
+                label: string;
+                url: string;
+                type: string;
+                order: number;
+                _id: string;
+                updatedAt: string;
+                createdAt: string;
+            }
+        ]
         category: {
             _id: string;
             name: string;
@@ -35,6 +46,17 @@ export class productDetail {
             price: number;
             quantity: number;
             image: string;
+            galleries: [
+                {
+                    label: string;
+                    url: string;
+                    type: string;
+                    order: number;
+                    _id: string;
+                    updatedAt: string;
+                    createdAt: string;
+                }
+            ]
             category: {
                 _id: string;
                 name: string;
