@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { categories } from './categories.class';
+import { categories } from '../models/categories.class';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 

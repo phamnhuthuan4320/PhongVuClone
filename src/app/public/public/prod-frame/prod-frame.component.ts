@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { products } from '../../products/products.class';
+import { products } from '../../models/products.class';
 
 @Component({
   selector: 'app-prod-frame',

@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SwiperModule } from "swiper/angular";
 import { NgxPaginationModule } from 'ngx-pagination';
 
-import { ProdsNamePipe } from './public/products/prods-name.pipe';
+import { ProdsNamePipe } from './public/pipes/prods-name.pipe';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './share/header/header.component';
@@ -18,7 +18,8 @@ import { ProdFrameComponent } from './public/public/prod-frame/prod-frame.compon
 import { BannerComponent } from './public/public/banner/banner.component';
 import { SquareComponent } from './public/public/square/square.component';
 import { ProdPagiComponent } from './public/public/prod-pagi/prod-pagi.component';
-import { PdBarComponent } from './public/public/pd-bar/pd-bar.component';
+import { PdBarComponent } from './share/pd-bar/pd-bar.component';
+import { ProductDetailComponent } from './public/public/product/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { PdBarComponent } from './public/public/pd-bar/pd-bar.component';
     BannerComponent,
     SquareComponent,
     ProdPagiComponent,
-    PdBarComponent
+    PdBarComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -19,7 +19,7 @@
                 [navigation]="true"
                 class="mySwiper content">
             <ng-template swiperSlide *ngFor="let item of prods.data">
-                <a href="" class="prod-a">
+                <a [routerLink]="['/productDetail', item._id]" class="prod-a">
                     <app-product [img]="item.image" [name]="item.name" [price]="item.price" [width]="width"></app-product>
                 </a>
             </ng-template>

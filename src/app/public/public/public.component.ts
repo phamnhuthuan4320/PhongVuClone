@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { products } from '../products/products.class';
-import { ProductsService } from '../products/products.service';
+import { products } from '../models/products.class';
+import { ProductsService } from '../services/products.service';
 
 @Component({
   selector: 'app-public',

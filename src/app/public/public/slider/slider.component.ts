@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { categories } from '../../categories/categories.class';
-import { CategoriesService } from '../../categories/categories.service';
+import { categories } from '../../models/categories.class';
+import { CategoriesService } from '../../services/categories.service';
 
 @Component({
   selector: 'app-slider',
