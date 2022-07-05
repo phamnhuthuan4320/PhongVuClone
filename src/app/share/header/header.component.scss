@@ -1,9 +1,24 @@
 .anniversary {
-    height: 39.34px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 
     &__img {
-        width: 100%;
+        width: 140%;
         height: 100%;
+    }
+
+    .x {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: white;
+    }
+
+    .x:hover {
+        cursor: pointer;
     }
 }
 

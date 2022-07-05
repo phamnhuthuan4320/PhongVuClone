@@ -1,0 +1,15 @@
+<div class="wrap">
+    <div class="watch">
+        <span class="cate">{{cateName}}</span>
+    </div>
+    <div class="prods">
+        <div class="prod" *ngFor="let item of prods.data |paginate:{itemsPerPage: 5, currentPage: currentPage}">
+            <a [routerLink]="['/public/productDetail', item._id]">
+                <app-product [img]="item.image" [name]="item.name" [price]="item.price" [width]="width"></app-product>
+            </a>
+        </div>
+    </div>
+    <div class="pagi">
+        <pagination-controls (pageChange)="currentPage=$event" class="pagination-controls" previousLabel="<" nextLabel=">"></pagination-controls>
+    </div>
+</div>

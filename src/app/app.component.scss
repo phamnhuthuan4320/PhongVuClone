@@ -4,6 +4,12 @@ app-pd-bar {
     right: 50px;
     z-index: 10;
 }
+
+app-header:hover ~ app-pd-bar {
+    top: 200px;
+    
+}
+
 .notice {
     z-index: 10;
     position: fixed;

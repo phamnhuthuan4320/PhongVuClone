@@ -1,0 +1,24 @@
+
+<div class="wrap" [ngStyle]="{'background-image': backImg}">
+    <div class="watch">
+        <span class="cate" [ngStyle]="{'color': watchColor}">{{cateName}}</span>
+        <a href="" [ngStyle]="{'color': watchColor}">Watch all ></a>
+    </div>
+    <div>
+        <swiper
+                [slidesPerView]="5"
+                [spaceBetween]="15"
+                [slidesPerGroup]="1"
+                [loop]="true"
+                [loopFillGroupWithBlank]="true"
+                [pagination]="{clickable: true}"
+                [navigation]="true"
+                class="mySwiper content">
+            <ng-template swiperSlide *ngFor="let item of prods.data">
+                <a [routerLink]="['/public/productDetail', item._id]" class="prod-a">
+                    <app-product [img]="item.image" [name]="item.name" [price]="item.price" [width]="width"></app-product>
+                </a>
+            </ng-template>
+        </swiper>
+    </div>
+</div>

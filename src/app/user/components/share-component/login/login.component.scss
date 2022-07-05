@@ -1,0 +1,123 @@
+.wrap {
+    padding: 15px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .component {
+        width: 60%;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 0px;
+
+        .content {
+            width: 50%;
+            height: 60%;
+
+            a {
+                text-decoration: none;
+            }
+
+            .title1 {
+                font-size: 1.25em;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 4px;
+            }
+
+            .title2 {
+                font-size: 1.25em;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+
+            .face {
+                height: 40px;
+                background-color: rgb(58, 58, 255);
+                color: white;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                padding: 10px;
+                border-radius: 5px;
+                margin-bottom: 15px;
+
+                .ficon {
+                    font-size: 1.5em;
+                }
+
+                .ftext {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+            .face:hover {
+                opacity: 0.8;
+            }
+
+            .google {
+                height: 40px;
+                background-color: rgb(196, 36, 36);
+                color: white;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                padding: 10px;
+                border-radius: 5px;
+                margin-bottom: 15px;
+
+                .gicon {
+                    font-size: 1.5em;
+                }
+
+                .gtext {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+            .google:hover {
+                opacity: 0.8;            }
+
+            .or {
+                text-align: center;
+                font-size: 1em;
+            }
+
+            .phone {
+                height: 40px;
+                background-color: white;
+                color: black;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                padding: 10px;
+                border-radius: 5px;
+                margin-top: 15px;
+                border: 1px solid rgb(0, 0, 167);
+
+                .picon {
+                    font-size: 1.5em;
+                    color: rgb(196, 36, 36);
+                }
+
+                .ptext {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+            .phone:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}

@@ -1,0 +1,84 @@
+.wrap {
+    margin: 0px 20px 30px 20px;
+    border-radius: 10px 10px 0px 0px;
+
+    .watch {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 30px;
+        height: 50px;
+        box-sizing: border-box;
+        margin-bottom: 1px;
+        background-color: white;
+        border-radius: 10px 10px 0px 0px;
+
+        .cate {
+            font-weight: bold;
+            font-size: 2em;
+            color: rgb(0, 0, 0);
+        }
+    }
+
+    .prods {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 2px;
+
+        .prod {
+            height: 360px;
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .pagi {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+    }
+}
+
+::ng-deep .ngx-pagination li {
+    background-color: white;
+    border-radius: 3px !important;
+    margin: 0px 10px;
+    border: 1px solid #cacaca;
+
+    a {
+        border-radius: 3px;
+    }
+}
+
+::ng-deep .ngx-pagination .disabled:hover {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #cacaca;
+    background-color: white !important;
+}
+
+::ng-deep .ngx-pagination .current {
+    background: rgb(20, 53, 195) !important;
+}
+
+::ng-deep .ngx-pagination .pagination-previous a:before {
+    content: none !important;
+    margin-right: 0px !important;
+}
+
+::ng-deep .ngx-pagination .pagination-previous.disabled:before {
+    content: none !important;
+    margin-right: 0px !important;
+}
+
+::ng-deep .ngx-pagination .pagination-next a:after {
+    content: none !important;
+    margin-left: 0px !important;
+}
+
+::ng-deep .ngx-pagination .pagination-next.disabled:after {
+    content: none !important;
+    margin-left: 0px !important;
+}

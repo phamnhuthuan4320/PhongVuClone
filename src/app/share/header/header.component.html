@@ -1,5 +1,6 @@
-<div class="anniversary">
-    <img class="anniversary__img" src="https://lh3.googleusercontent.com/7QWRyS6YRaxrLXIEeoTDrW45gT79bwkXsL6YkWy5W1H163fl-fFONtqqEyDTRQGmOb9ldNYfyFUht34miPDRwmvfQS2Kvlk4=w1920-rw">
+<div class="anniversary" *ngIf="display">
+    <img [ngStyle]="{'width': width}" class="anniversary__img" src="https://lh3.googleusercontent.com/7QWRyS6YRaxrLXIEeoTDrW45gT79bwkXsL6YkWy5W1H163fl-fFONtqqEyDTRQGmOb9ldNYfyFUht34miPDRwmvfQS2Kvlk4=w1920-rw">
+    <div class="x" (click)="onClose()">x</div>
 </div>
 <div class="lienhe">
     <div class="lienhe__1"></div>
@@ -27,7 +28,7 @@
     </div>
 </div>
 <div class="navbar">
-    <div class="narbar__logo"><a href=""><img src="https://phongvu.vn/phongvu/logo-full.svg" class="navbar__logo__img"></a></div>
+    <div class="narbar__logo"><a [routerLink]="['']"><img src="https://phongvu.vn/phongvu/logo-full.svg" class="navbar__logo__img"></a></div>
     <div class="navbar__content">
         <div class="navbar__content__search">
             <input type="text" class="navbar__content__search__input" placeholder="Enter keyword to search">
@@ -39,11 +40,11 @@
             <i class="fa fa-tag navbar__nav__tag__icon" aria-hidden="true"></i>
             <span class="text">Promotion</span>
         </a>
-        <a href="" class="navbar__nav__tag">
+        <a [routerLink]="['/user/order']" class="navbar__nav__tag">
             <i class="fa fa-calendar-check-o navbar__nav__tag__icon" aria-hidden="true"></i>
             <span class="text">Order</span>
         </a>
-        <a href="" class="navbar__nav__tag">
+        <a [routerLink]="['/user/login']" class="navbar__nav__tag">
             <i class="fa fa-user-circle navbar__nav__tag__icon" aria-hidden="true"></i>
             <span class="text">Login</span>
         </a>
@@ -54,7 +55,7 @@
 
             </div>
         </a>
-        <a href="" class="navbar__nav__tag navbar__nav__tagCart">
+        <a [routerLink]="['/user/cart']" class="navbar__nav__tag navbar__nav__tagCart">
             <i class="fa fa-shopping-cart navbar__nav__tag__icon" aria-hidden="true"></i>
             <span class="text">Cart</span>
             <div class="divCart">
