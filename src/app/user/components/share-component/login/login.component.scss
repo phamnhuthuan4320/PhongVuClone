@@ -89,6 +89,7 @@
             .or {
                 text-align: center;
                 font-size: 1em;
+                margin-top: 30px;
             }
 
             .phone {
@@ -102,6 +103,7 @@
                 border-radius: 5px;
                 margin-top: 15px;
                 border: 1px solid rgb(0, 0, 167);
+                margin-bottom: 15px;
 
                 .picon {
                     font-size: 1.5em;
@@ -116,6 +118,35 @@
             }
 
             .phone:hover {
+                opacity: 0.8;
+            }
+
+            .create {
+                height: 40px;
+                background-color: rgb(255, 230, 92);
+                color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                border-radius: 5px;
+                margin-top: 15px;
+                border: 1px solid rgb(16, 81, 221);
+                margin-bottom: 15px;
+
+                .picon {
+                    font-size: 1.5em;
+                    color: rgb(196, 36, 36);
+                }
+
+                .ptext {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+            .create:hover {
                 opacity: 0.8;
             }
         }

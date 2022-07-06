@@ -32,6 +32,7 @@ export class SliderComponent implements OnInit {
     this._cate.getCategories().subscribe((data) => {
       this.cates = data;
     })
+
     this.time = setInterval(()=>{
       this.index++;
       if(this.index==this.slides.length){
@@ -46,6 +47,7 @@ export class SliderComponent implements OnInit {
 
   chooseSlide(i: number){
     this.index = i;
+
     clearInterval(this.time);
     this.time = setInterval(()=>{
       this.index++;
@@ -60,9 +62,11 @@ export class SliderComponent implements OnInit {
     if(this.index==this.slides.length){
       this.index = 0;
     }
+
     if(this.index<0){
       this.index = this.slides.length-1;
     }
+    
     clearInterval(this.time);
     this.time = setInterval(()=>{
       this.index++;

@@ -29,6 +29,8 @@ import { AppComponent } from './app.component';
     import { LoginComponent } from './user/components/share-component/login/login.component';
 import { CartComponent } from './user/components/share-component/cart/cart.component';
 import { OrderComponent } from './user/components/share-component/order/order.component';
+import { PageComponent } from './user/components/share-component/login/page/page.component';
+import { SignupComponent } from './user/components/share-component/login/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { OrderComponent } from './user/components/share-component/order/order.co
       UserComponent,
         LoginComponent,
         CartComponent,
-        OrderComponent
+        OrderComponent,
+        PageComponent,
+        SignupComponent
   ],
   imports: [
     BrowserModule,

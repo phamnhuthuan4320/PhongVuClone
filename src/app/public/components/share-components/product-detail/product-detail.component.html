@@ -121,7 +121,7 @@
                         </svg>
                     </div>
                     <div class="text1">
-                        <div class="title">Reduce 1000</div>
+                        <div class="title">Reduce AUD 1000</div>
                         <div class="hsd">HSD: 27/07/2022</div>
                     </div>
                     <div class="text2">
@@ -129,10 +129,8 @@
                     </div>
                 </div>
                 <div class="btn">
-                    <a [routerLink]="['/user/cart']">
-                        <div class="buy">BUY NOW</div>
-                    </a>
-                    <div class="add">ADD TO CART</div>
+                    <div class="buy" (click)="onBuynow()">BUY NOW</div>
+                    <div class="add" (click)="onAdd()">ADD TO CART</div>
                 </div>
                 <div class="relate">
                     <div class="title">Related promotion</div>
@@ -215,5 +213,5 @@
         </div>
     </div>
 
-    <app-prod-frame [cateName]="cateName" [prods]="prods" [width]="'80%'" [watchColor]="'black'"></app-prod-frame>
+    <!-- <app-prod-frame [cateName]="cateName" [prods]="prods" [width]="'80%'" [watchColor]="'black'"></app-prod-frame> -->
 </div>

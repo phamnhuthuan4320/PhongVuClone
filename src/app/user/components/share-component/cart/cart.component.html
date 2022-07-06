@@ -1,1 +1,85 @@
-<p>cart works!</p>
+<div class="wrap">
+    <div class="breakcrum">
+        <a [routerLink]="['']">
+            <div class="home"><i class="fa fa-home" aria-hidden="true"></i></div>
+        </a>
+        >
+        <div class="lv1">Cart</div>
+    </div>
+    <div class="section" *ngIf="isCartProdsEmpty">
+        <div class="prod">
+            <div class="delete">
+                <span class="all" (click)="onDeleteAll()">Delete all</span>
+            </div>
+            <div class="Tframe">
+                <div class="Tcheck"><input type="checkbox"></div>
+                <div class="Tcontent">
+                    <div class="TimgDiv">
+                        <div class="Timg">
+                            <img
+                                src="https://lh3.googleusercontent.com/qOnchEYD7No58bjEQs5pf_05IV-0DmoaCmEFXD007VHs5cn16LZ6PC98IlY3OiBL9UXsEwNzwiVHRrvSDMQ">
+                        </div>
+                    </div>
+                    <span class="Tname">PHONG VU TRADING SERVICE JOINT STOCK COMPANY</span>
+                </div>
+                <div class="Tprice">Unit price</div>
+                <div class="Tamount">Amount</div>
+                <div class="Tinto">Into money</div>
+            </div>
+            <div class="frame" *ngFor="let prod of cartProds, let id = index">
+                <div class="check"><input type="checkbox"></div>
+                <div class="content">
+                    <a [routerLink]="['/public/productDetail', prod._id]">
+                        <div class="img">
+                            <img [src]="prod.data.image">
+                        </div>
+                    </a>
+                    <div class="name">
+                        <a href="">
+                            <div class="des">{{prod.data.name | prodsName}}</div>
+                        </a>
+                        <div class="sku">SKU: {{prod.data.sku}}</div>
+                    </div>
+                </div>
+                <div class="price">
+                    <div class="current">AUD {{prod.data.price}}</div>
+                    <div class="pre">AUD {{prod.data.price * 1.25}}</div>
+                </div>
+                <div class="amount">
+                    <div class="div1">
+                        <span class="tru">-</span>
+                        <input type="text" value="1">
+                        <span class="cong">+</span>
+                    </div>
+                    <div class="div2" id="{{id}}" (click)="onErase(prod.data._id)">
+                        Erase
+                    </div>
+                </div>
+                <div class="into">AUD {{prod.data.price}}</div>
+            </div>
+        </div>
+        <div class="policy">
+            <div class="div div1">
+                <div class="title1">Select discount code/coupon</div>
+                <form class="form" action="">
+                    <input type="text" class="input">
+                    <button class="apply">Apply now</button>
+                </form>
+            </div>
+            <div class="div">
+                <div class="title2">Pay</div>
+                <div class="content">
+                    <span class="text">Provisional</span><span class="price">AUD 0</span>
+                </div>
+                <div class="content">
+                    <span class="text">Into money</span><span class="redprice">AUD 10</span>
+                </div>
+                <div class="vat">(VAT included)</div>
+                <div class="continue">CONTINUE</div>
+            </div>
+        </div>
+    </div>
+    <div class="sectionHidden" *ngIf="!isCartProdsEmpty">
+        <div class="add" [routerLink]="'/public'">Add product</div>
+    </div>
+</div>

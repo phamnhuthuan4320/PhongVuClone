@@ -126,10 +126,6 @@
                 font-size: 2em;
             }
 
-            // .text {
-            //     display: none;
-            // }
-
             .divCart {
                 background-color: rgb(255, 255, 255);
                 width: 370px;
@@ -146,9 +142,9 @@
                 background-repeat: no-repeat;
             }
 
-            .divCart:hover {
-                display: block;
-            }
+            // .divCart:hover {
+            //     display: block;
+            // }
 
             .divNoti {
                 background-color: rgb(255, 255, 255);
@@ -166,21 +162,21 @@
                 background-repeat: no-repeat;
             }
 
-            .divNoti:hover {
-                display: block;
-            }
+            // .divNoti:hover {
+            //     display: block;
+            // }
         }
 
         &__tag:hover {
             color: rgb(20, 53, 195);
         }
 
-        &__tagCart:hover .divCart {
-            display: block;
-        }
+        // &__tagCart:hover .divCart {
+        //     display: block;
+        // }
 
-        &__tagNoti:hover .divNoti {
-            display: block;
-        }
+        // &__tagNoti:hover .divNoti {
+        //     display: block;
+        // }
     }
 }

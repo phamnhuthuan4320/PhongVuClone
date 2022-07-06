@@ -79,6 +79,8 @@ export class PublicComponent implements OnInit {
   constructor(private _pro: ProductsService) { }
 
   ngOnInit(): void {
+    window.scroll({top: 0, behavior: "smooth"});
+    
     this._pro.getProducts().subscribe((data) => {
       this.prods = data;
     })

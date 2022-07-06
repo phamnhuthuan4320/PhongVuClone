@@ -3,7 +3,7 @@
         <div class="content">
             <div class="title1">Welcome to PhongVu.vn | Laptop, PC,</div>
             <div class="title2">Monitor, phone, Genuine parts !</div>
-            <a href="">
+            <a [routerLink]="'/user/login/page'">
                 <div class="face">
                     <span class="ficon">
                         <i class="fa fa-facebook-official" aria-hidden="true"></i>
@@ -11,20 +11,25 @@
                     <span class="ftext">Continue with Facebook</span>
                 </div>
             </a>
-            <a href="">
+            <a [routerLink]="'/user/login/page'">
                 <div class="google">
                     <span class="gicon">
                         <i class="fa fa-google" aria-hidden="true"></i></span>
                     <span class="gtext">Continue with Google</span>
                 </div>
             </a>
-            <div class="or">Or</div>
-            <a href="">
+            <a [routerLink]="'/user/login/page'">
                 <div class="phone">
                     <span class="picon">
                         <i class="fa fa-phone" aria-hidden="true"></i>
                     </span>
                     <span class="ptext">Continue with phone number</span>
+                </div>
+            </a>
+            <div class="or">Don't have an account</div>
+            <a [routerLink]="'/user/login/signup'">
+                <div class="create">
+                    Create account
                 </div>
             </a>
         </div>

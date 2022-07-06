@@ -1,0 +1,119 @@
+.wrap {
+    padding: 15px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .component {
+        width: 60%;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 0px;
+
+        .content {
+            width: 50%;
+            height: 60%;
+
+            .title1 {
+                font-size: 1.25em;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 4px;
+            }
+
+            .title2 {
+                font-size: 1.25em;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .user {
+                margin-bottom: 15px;
+                .title {
+                    font-size: 1em;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+
+                input {
+                    height: 35px;
+                    padding: 0px 10px;
+                    border-radius: 5px;
+                    border: 1px solid gray;
+                    width: 100%;
+                }
+            }
+
+            .pass {
+                margin-bottom: 10px;
+                .title {
+                    font-size: 1em;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+
+                input {
+                    height: 35px;
+                    padding: 0px 10px;
+                    border-radius: 5px;
+                    border: 1px solid gray;
+                    width: 100%;
+                }
+            }
+
+            .div {
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: space-between;
+
+                .text {
+                    color: blue;
+                }
+
+                .text:hover {
+                    cursor: pointer;
+                    color: rgb(196, 36, 36);
+                }
+            }
+
+            .face {
+                height: 40px;
+                background-color: rgb(58, 58, 255);
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                border-radius: 5px;
+                margin-bottom: 5px;
+            }
+
+            .face:hover {
+                opacity: 0.8;
+                cursor: pointer;
+            }
+
+            .google {
+                height: 40px;
+                background-color: rgb(196, 36, 36);
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                border-radius: 5px;
+                margin-bottom: 15px;
+            }
+
+            .google:hover {
+                cursor: pointer;
+                opacity: 0.8;            
+            }
+
+        }
+    }
+}
