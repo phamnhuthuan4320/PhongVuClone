@@ -12,4 +12,8 @@ export class PdBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onToTop(){
+    window.scroll({top: 0, behavior: "smooth"});
+  }
+
 }

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { productDetail } from 'src/app/public/models/productDetail.class';
 import { ProductsService } from '../../../services/products.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { products } from '../../../models/products.class';
 
 @Component({
   selector: 'app-product-detail',
@@ -14,19 +13,17 @@ export class ProductDetailComponent implements OnInit {
   id: string;
   prod: productDetail;
   cateName: string = 'For you';
-  prods: products;
   isCheck: string = 'Unchecked';
   backColor: string = 'rgb(253, 230, 230)';
   border: string = '1px solid blue';
   cartProds: any[] = [];
+  isAdded: boolean = false;
+  isLoading: boolean = true;
 
   constructor(private _pro: ProductsService, private _activatedRoute: ActivatedRoute, private _router: Router) { }
 
   ngOnInit(): void {
     window.scroll({ top: 0, behavior: "smooth" });
-    // this._pro.getProducts().subscribe((data) => {
-    //   this.prods = data;
-    // })
 
     this._activatedRoute.params.subscribe((data) => {
       this.id = data['id'];
@@ -34,6 +31,8 @@ export class ProductDetailComponent implements OnInit {
 
     this._pro.getProductsDetail(this.id).subscribe((data) => {
       this.prod = data;
+
+      this.isLoading = false;
     })
 
   }
@@ -69,5 +68,10 @@ export class ProductDetailComponent implements OnInit {
     this.cartProds = JSON.parse(localStorage.getItem('cartProds'));
     this.cartProds.push(this.prod);
     localStorage.setItem('cartProds', JSON.stringify(this.cartProds));
+
+    this.isAdded = true;
+    setTimeout(() => {
+      this.isAdded = false;
+    }, 3000);
   }
 }

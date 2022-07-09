@@ -44,10 +44,15 @@
             <i class="fa fa-calendar-check-o navbar__nav__tag__icon" aria-hidden="true"></i>
             <span class="text">Order</span>
         </a>
-        <a [routerLink]="['/user/login']" class="navbar__nav__tag">
+        <div class="navbar__nav__tag navbar__nav__tagLogin" (click)="onLogin()" (mouseover)="onGetLoginToken()">
             <i class="fa fa-user-circle navbar__nav__tag__icon" aria-hidden="true"></i>
             <span class="text">Login</span>
-        </a>
+            <div class="divLogin" *ngIf="isLogin">
+                <div class="btnLogout" (click)="onLogout()">
+                    Logout
+                </div>
+            </div>
+        </div>
         <a href="" class="navbar__nav__tag navbar__nav__tagNoti">
             <i class="fa fa-bell-o navbar__nav__tag__icon" aria-hidden="true"></i>
             <span class="text">Notify</span>

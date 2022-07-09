@@ -1,8 +1,8 @@
 app-pd-bar {
     position: fixed;
-    top: 175px;
-    right: 30px;
-    z-index: 10;
+    top: 200px;
+    right: 10px;
+    z-index: 100;
 }
 
 app-header:hover ~ app-pd-bar {
@@ -13,7 +13,7 @@ app-header:hover ~ app-pd-bar {
     z-index: 10;
     position: fixed;
     bottom: 65px;
-    left: 50px;
+    left: 10px;
     display: flex;
     justify-content: end;
     align-items: center;

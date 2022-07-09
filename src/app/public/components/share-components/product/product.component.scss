@@ -1,3 +1,6 @@
+@import '../../../../../variable';
+@import '../../../../../mixins';
+
 .wrap {
     background-color: rgb(255, 255, 255);
     padding: 12px;
@@ -9,9 +12,7 @@
         height: 70%;
         box-sizing: border-box;
         overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include toCenter();
         
 
         .img {

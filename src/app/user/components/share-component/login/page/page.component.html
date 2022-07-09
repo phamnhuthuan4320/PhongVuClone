@@ -1,29 +1,40 @@
 <div class="wrap">
+    <app-loader *ngIf="isLoading"></app-loader>
     <div class="component">
         <div class="content">
             <div class="title1">Welcome to PhongVu.vn | Laptop, PC,</div>
             <div class="title2">Monitor, phone, Genuine parts !</div>
-            <form action="">
+            <form [formGroup]="form">
+                <div class="alert"
+                    *ngIf="error">User name or password is wrong !
+                </div>
                 <div class="user">
                     <div class="title">User name</div>
-                    <input type="text" autofocus>
+                    <input type="text" autofocus name="username" formControlName="email">
                 </div>
+                <div class="alert"
+                    *ngIf="form.controls.email.dirty && form.controls.email.errors?.required">Email is required
+                </div>
+                <div class="alert" *ngIf="form.controls.email.dirty && form.controls.email.errors?.pattern">Email
+                    invalidate</div>
                 <div class="pass">
                     <div class="title">Password</div>
-                    <input type="password">
+                    <input type="password" name="password" formControlName="password">
+                </div>
+                <div class="alert"
+                    *ngIf="form.controls.password.dirty && form.controls.password.errors?.required">Password is required
                 </div>
                 <div class="div">
                     <span class="text">Forgot password</span>
                     <span class="text">Reset password</span>
                 </div>
-                <div class="face">
+                <button class="face" (click)="onLogin()" [disabled]="form.invalid">
                     <span class="ftext">Login</span>
-                </div>
-                <div class="google">
+                </button>
+                <button class="google" (click)="onResetForm()">
                     <span class="gtext">Reset</span>
-                </div>
+                </button>
             </form>
-
         </div>
     </div>
 </div>

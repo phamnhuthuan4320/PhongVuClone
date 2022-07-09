@@ -5,10 +5,11 @@ import { PublicComponent } from './public/components/public/public.component';
 import { ProductDetailComponent } from './public/components/share-components/product-detail/product-detail.component';
 import { UserComponent } from './user/components/user/user.component';
 import { LoginComponent } from './user/components/share-component/login/login.component';
-import { CartComponent } from './user/components/share-component/cart/cart.component';
-import { OrderComponent } from './user/components/share-component/order/order.component';
 import { PageComponent } from './user/components/share-component/login/page/page.component';
 import { SignupComponent } from './user/components/share-component/login/signup/signup.component';
+import { CartComponent } from './user/components/share-component/cart/cart.component';
+import { CheckoutComponent } from './user/components/share-component/checkout/checkout.component';
+import { OrderComponent } from './user/components/share-component/order/order.component';
 
 const routes: Routes = [
   {
@@ -60,6 +61,10 @@ const routes: Routes = [
       {
         path: 'order',
         component: OrderComponent
+      },
+      {
+        path: 'checkout',
+        component: CheckoutComponent
       }
     ]
   }

@@ -1,4 +1,5 @@
 <div class="wrap">
+    <app-loader *ngIf="isLoading"></app-loader>
     <div class="breakcrum">
         <a [routerLink]="['']">
             <div class="home"><i class="fa fa-home" aria-hidden="true"></i></div>
@@ -132,6 +133,13 @@
                     <div class="buy" (click)="onBuynow()">BUY NOW</div>
                     <div class="add" (click)="onAdd()">ADD TO CART</div>
                 </div>
+                <div class="addedDiv" *ngIf="isAdded">
+                    <div class="added" >
+                        <div class="noti">
+                            Add product to cart SUCCESS !
+                        </div>
+                    </div>
+                </div>
                 <div class="relate">
                     <div class="title">Related promotion</div>
                     <ul>
@@ -212,6 +220,4 @@
             </ul>
         </div>
     </div>
-
-    <!-- <app-prod-frame [cateName]="cateName" [prods]="prods" [width]="'80%'" [watchColor]="'black'"></app-prod-frame> -->
 </div>

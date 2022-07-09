@@ -82,6 +82,7 @@
 
             .face {
                 height: 40px;
+                width: 100%;
                 background-color: rgb(58, 58, 255);
                 color: white;
                 display: flex;
@@ -90,6 +91,7 @@
                 padding: 10px;
                 border-radius: 5px;
                 margin-bottom: 5px;
+                border: none;
             }
 
             .face:hover {
@@ -99,6 +101,7 @@
 
             .google {
                 height: 40px;
+                width: 100%;
                 background-color: rgb(196, 36, 36);
                 color: white;
                 display: flex;
@@ -107,6 +110,7 @@
                 padding: 10px;
                 border-radius: 5px;
                 margin-bottom: 15px;
+                border: none;
             }
 
             .google:hover {
@@ -114,6 +118,16 @@
                 opacity: 0.8;            
             }
 
+            .alert {
+                width: 100%;
+                background-color: rgb(255, 97, 97);
+                font-weight: bold;
+                font-size: 0.9em;
+                border-radius: 50px;
+                margin: 0px 0px 25px 0px;
+                padding: 5px;
+                text-align: center;
+            }
         }
     }
 }

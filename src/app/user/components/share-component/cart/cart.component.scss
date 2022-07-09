@@ -1,5 +1,6 @@
 .wrap {
     padding: 15px 0px 0px 0px;
+    position: relative;
 
     .breakcrum {
         height: 30px;
@@ -56,7 +57,7 @@
                 justify-content: end;
                 align-items: center;
                 margin-bottom: 30px;
-                
+
                 .all {
                     color: blue;
                 }
@@ -96,7 +97,7 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        
+
                         .Timg {
                             height: 50px;
                             width: 50px;
@@ -106,7 +107,7 @@
                             justify-content: center;
                             align-items: center;
                             padding: 10px;
-    
+
                             img {
                                 width: 100%;
                             }
@@ -252,6 +253,14 @@
                         input:focus {
                             outline: none;
                         }
+
+                        .tru:hover {
+                            cursor: pointer;
+                        }
+
+                        .cong:hover {
+                            cursor: pointer;
+                        }
                     }
 
                     .div2 {
@@ -282,7 +291,7 @@
         .policy {
             width: 100%;
 
-            .div1{
+            .div1 {
                 margin-bottom: 15px;
             }
 
@@ -316,6 +325,10 @@
                         color: white;
                         border: none;
                         border-radius: 5px;
+                    }
+
+                    .apply:hover {
+                        cursor: pointer;
                     }
                 }
 
@@ -354,7 +367,6 @@
                 }
 
                 .continue {
-                    background-color: rgb(175, 175, 175);
                     color: rgb(88, 88, 88);
                     display: flex;
                     justify-content: center;
@@ -362,6 +374,8 @@
                     margin-top: 15px;
                     padding: 15px;
                     border-radius: 5px;
+                    border: none;
+                    width: 100%;
                 }
 
                 .continue:hover {
@@ -382,7 +396,7 @@
         margin: 20px 50px;
         height: 300px;
 
-         .add {
+        .add {
             width: 50%;
             height: 40px;
             display: flex;
@@ -391,11 +405,83 @@
             background-color: blue;
             color: white;
             border-radius: 5px;
-         }
+        }
 
-         .add:hover {
+        .add:hover {
             cursor: pointer;
             background-color: rgb(0, 0, 150);
-         }
+        }
+    }
+
+    .confirm {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+    }
+
+    .back {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: white;
+        width: 300px;
+        height: 200px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+
+        .title {
+            font-size: 1em;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: space-between;
+
+            .cancel {
+                width: 100px;
+                height: 40px;
+                border-radius: 5px;
+                background-color: yellow;
+                font-size: 0.9em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 20px;
+            }
+
+            .cancel:hover {
+                cursor: pointer;
+            }
+
+            .yes {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100px;
+                height: 40px;
+                border-radius: 5px;
+                background-color: rgb(170, 0, 0);
+                font-size: 0.9em;
+                color: white;
+            }
+
+            .yes:hover {
+                cursor: pointer;
+            }
+        }
     }
 }

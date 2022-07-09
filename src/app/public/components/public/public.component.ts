@@ -74,6 +74,7 @@ export class PublicComponent implements OnInit {
       name: 'Handheld vacuum cleaner', img: 'https://lh3.googleusercontent.com/z-_03H6weFq6fCC-2YzYU8B5CTZL_zhBBktHi8szVPdD1CUcPJPtXpKdjvvCANCqjCdvm97lOL9HIIJVQBVcTZQIjCSPX-UU=rw-w300'
     }
   ];
+  isLoading: boolean = true;
   
 
   constructor(private _pro: ProductsService) { }
@@ -83,6 +84,8 @@ export class PublicComponent implements OnInit {
     
     this._pro.getProducts().subscribe((data) => {
       this.prods = data;
+      
+      this.isLoading = false;
     })
   }
 }

@@ -12,7 +12,7 @@
                 <span class="all" (click)="onDeleteAll()">Delete all</span>
             </div>
             <div class="Tframe">
-                <div class="Tcheck"><input type="checkbox"></div>
+                <div class="Tcheck"><input type="checkbox" [(ngModel)]="totalCheck" (ngModelChange)="onChooseAll()"></div>
                 <div class="Tcontent">
                     <div class="TimgDiv">
                         <div class="Timg">
@@ -26,16 +26,16 @@
                 <div class="Tamount">Amount</div>
                 <div class="Tinto">Into money</div>
             </div>
-            <div class="frame" *ngFor="let prod of cartProds, let id = index">
-                <div class="check"><input type="checkbox"></div>
+            <div class="frame" *ngFor="let prod of cartProds, let index = index">
+                <div class="check"><input type="checkbox" [(ngModel)]="prodCheck[index]" (ngModelChange)="onChooseProd(index, prod.data.price)"></div>
                 <div class="content">
-                    <a [routerLink]="['/public/productDetail', prod._id]">
+                    <a [routerLink]="['/public/productDetail', prod.data._id]">
                         <div class="img">
                             <img [src]="prod.data.image">
                         </div>
                     </a>
                     <div class="name">
-                        <a href="">
+                        <a [routerLink]="['/public/productDetail', prod.data._id]">
                             <div class="des">{{prod.data.name | prodsName}}</div>
                         </a>
                         <div class="sku">SKU: {{prod.data.sku}}</div>
@@ -51,7 +51,7 @@
                         <input type="text" value="1">
                         <span class="cong">+</span>
                     </div>
-                    <div class="div2" id="{{id}}" (click)="onErase(prod.data._id)">
+                    <div class="div2" (click)="onErase(index, prod.data.price)">
                         Erase
                     </div>
                 </div>
@@ -61,25 +61,41 @@
         <div class="policy">
             <div class="div div1">
                 <div class="title1">Select discount code/coupon</div>
-                <form class="form" action="">
+                <form class="form" action="" method="post">
                     <input type="text" class="input">
-                    <button class="apply">Apply now</button>
+                    <button class="apply" type="button">Apply now</button>
                 </form>
             </div>
             <div class="div">
                 <div class="title2">Pay</div>
                 <div class="content">
-                    <span class="text">Provisional</span><span class="price">AUD 0</span>
+                    <span class="text">Provisional</span><span class="price">AUD {{provisPrice}}</span>
                 </div>
                 <div class="content">
-                    <span class="text">Into money</span><span class="redprice">AUD 10</span>
+                    <span class="text">Into money</span><span class="redprice">AUD {{totalPrice}}</span>
                 </div>
                 <div class="vat">(VAT included)</div>
-                <div class="continue">CONTINUE</div>
+                <button (click)="onContinue()" class="continue" [disabled]="isUncheckAll" [ngStyle]="{'background-color': !isUncheckAll ? 'blue' : 'rgb(175, 175, 175)', 'color': !isUncheckAll ? 'white' : 'black'}">CONTINUE</button>
             </div>
         </div>
     </div>
     <div class="sectionHidden" *ngIf="!isCartProdsEmpty">
         <div class="add" [routerLink]="'/public'">Add product</div>
+    </div>
+    <div class="confirm" *ngIf="isShowConfirmErase"></div>
+    <div class="back" *ngIf="isShowConfirmErase">
+        <div class="title">Are you sure ?</div>
+        <div class="btn">
+            <div class="cancel" (click)="onCancelErase()">Cancel</div>
+            <div class="yes" (click)="onYesErase(index, price)">Yes</div>
+        </div>
+    </div>
+    <div class="confirm" *ngIf="isShowConfirmDeleteAll"></div>
+    <div class="back" *ngIf="isShowConfirmDeleteAll">
+        <div class="title">Are you sure ?</div>
+        <div class="btn">
+            <div class="cancel" (click)="onCancelDeleteAll()">Cancel</div>
+            <div class="yes" (click)="onYesDeleteAll()">Yes</div>
+        </div>
     </div>
 </div>

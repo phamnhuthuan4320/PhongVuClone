@@ -1,0 +1,244 @@
+.wrap {
+    padding: 15px 0px 0px 0px;
+
+    .section {
+        display: grid;
+        grid-template-columns: 2fr 1.25fr;
+        gap: 15px;
+        margin: 20px 50px;
+
+        .prod {
+            width: 100%;
+
+            .diachi {
+                background-color: white;
+                border-radius: 10px;
+                margin-bottom: 15px;
+                padding: 15px;
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                gap: 15px;
+
+                .text {
+                    .titleDiv {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 15px;
+                        border-bottom: 1px solid rgb(177, 177, 177);
+
+                        .title {
+                            font-size: 1.25em;
+                            font-weight: bold;
+                        }
+                    }
+
+                    .ten,
+                    .sdt,
+                    .position {
+                        display: flex;
+                        justify-content: center;
+                        margin-bottom: 5px;
+                    }
+                }
+
+                .btn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .edit {
+                        width: 75%;
+                        padding: 15px;
+                        background-color: blue;
+                        color: white;
+                        font-weight: bold;
+                        font-size: 1.5em;
+                        border-radius: 5px;
+                        text-align: center;
+                    }
+
+                    .edit:hover {
+                        cursor: pointer;
+                        background-color: rgb(0, 0, 151);
+                    }
+                }
+            }
+
+            .phuongthuc {
+                background-color: white;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                padding: 15px;
+
+                .title {
+                    font-size: 1.25em;
+                    font-weight: bold;
+                    margin-bottom: 15px;
+                    display: flex;
+                    justify-content: center;
+                    border-bottom: 1px solid rgb(177, 177, 177);
+                }
+
+                .methodDiv {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    gap: 15px;
+
+                    .method {
+                        padding: 15px;
+                        width: 100%;
+                        font-weight: bold;
+                        text-align: center;
+                        border-radius: 5px;
+                        border: 1px solid black;
+                        
+                    }
+
+                    .method:hover {
+                        cursor: pointer;
+                        border: 1px solid blue;
+                    }
+                }
+            }
+        }
+
+        .policy {
+            width: 100%;
+
+            .thongtin {
+                background-color: white;
+                border-radius: 10px;
+                margin-bottom: 15px;
+                padding: 15px;
+
+                .title {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 15px;
+
+                    .text {
+                        font-size: 1.25em;
+                        font-weight: bold;
+                    }
+
+                    .edit {
+                        color: blue;
+                        margin-right: 20px;
+                        text-decoration: none;
+                    }
+
+                    .edit:hover {
+                        cursor: pointer;
+                        color: rgb(0, 0, 187);
+                    }
+                }
+
+                .product {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 5px;
+                    border-bottom: 1px dashed rgb(202, 202, 202);
+                    padding-bottom: 10px;
+
+                    .left {
+                        width: 80px;
+                        height: 80px;
+
+                        .imgDiv{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border: 1px solid black;
+
+                            .img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+
+                    .right {
+                        margin-left: 10px;
+
+                        .name {
+                            font-weight: bold;
+                        }
+
+                        .qua {
+                            color: gray;
+                        }
+
+                        .price {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+
+            .thanhtoan {
+                background-color: white;
+                border-radius: 10px;
+                margin-bottom: 20px;
+
+                .div {
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 15px;
+    
+                    .title2 {
+                        font-size: 1.5em;
+                        font-weight: bold;
+                        margin-bottom: 15px;
+                    }
+    
+                    .content {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 10px;
+    
+                        .text {
+                            color: gray;
+                            font-size: 1em;
+                        }
+    
+                        .price {
+                            font-size: 1em;
+                            font-weight: bold;
+                        }
+    
+                        .redprice {
+                            font-size: 1.25em;
+                            font-weight: bold;
+                            color: red;
+                        }
+                    }
+    
+                    .vat {
+                        display: flex;
+                        justify-content: end;
+                        color: gray;
+                    }
+    
+                    .pay {
+                        color: white;
+                        font-family: bold;
+                        background-color: blue;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 15px;
+                        padding: 15px;
+                        border-radius: 5px;
+                        border: none;
+                        width: 100%;
+                    }
+    
+                    .pay:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

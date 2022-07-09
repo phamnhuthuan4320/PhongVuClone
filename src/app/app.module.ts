@@ -1,66 +1,81 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-  import { HttpClientModule } from '@angular/common/http';
-  import { SwiperModule } from "swiper/angular";
-  import { NgxPaginationModule } from 'ngx-pagination';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SwiperModule } from "swiper/angular";
+import { NgxPaginationModule } from 'ngx-pagination';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
 
 //Pipes
 import { ProdsNamePipe } from './public/pipes/prods-name.pipe';
 
+//Services
+
+
 //Components
 import { AppComponent } from './app.component';
-  //share
-  import { HeaderComponent } from './share/header/header.component';
-  import { FooterComponent } from './share/footer/footer.component';
-  //public
-  import { PublicComponent } from './public/components/public/public.component';
-  import { ProductDetailComponent } from './public/components/share-components/product-detail/product-detail.component';
-    import { SliderComponent } from './public/components/share-components/slider/slider.component';
-    import { TabComponent } from './public/components/share-components/tab/tab.component';
-    import { ProductComponent } from './public/components/share-components/product/product.component';
-    import { ProdFrameComponent } from './public/components/share-components/prod-frame/prod-frame.component';
-    import { BannerComponent } from './public/components/share-components/banner/banner.component';
-    import { SquareComponent } from './public/components/share-components/square/square.component';
-    import { ProdPagiComponent } from './public/components/share-components/prod-pagi/prod-pagi.component';
-    import { PdBarComponent } from './share/pd-bar/pd-bar.component';
-  //user
-  import { UserComponent } from './user/components/user/user.component';
-    import { LoginComponent } from './user/components/share-component/login/login.component';
+//share
+import { HeaderComponent } from './share/header/header.component';
+import { FooterComponent } from './share/footer/footer.component';
+import { LoaderComponent } from './share/loader/loader.component';
+//public
+import { PublicComponent } from './public/components/public/public.component';
+import { ProductDetailComponent } from './public/components/share-components/product-detail/product-detail.component';
+import { SliderComponent } from './public/components/share-components/slider/slider.component';
+import { TabComponent } from './public/components/share-components/tab/tab.component';
+import { ProductComponent } from './public/components/share-components/product/product.component';
+import { ProdFrameComponent } from './public/components/share-components/prod-frame/prod-frame.component';
+import { BannerComponent } from './public/components/share-components/banner/banner.component';
+import { SquareComponent } from './public/components/share-components/square/square.component';
+import { ProdPagiComponent } from './public/components/share-components/prod-pagi/prod-pagi.component';
+import { PdBarComponent } from './share/pd-bar/pd-bar.component';
+//user
+import { UserComponent } from './user/components/user/user.component';
 import { CartComponent } from './user/components/share-component/cart/cart.component';
 import { OrderComponent } from './user/components/share-component/order/order.component';
+import { LoginComponent } from './user/components/share-component/login/login.component';
 import { PageComponent } from './user/components/share-component/login/page/page.component';
 import { SignupComponent } from './user/components/share-component/login/signup/signup.component';
+import { CheckoutComponent } from './user/components/share-component/checkout/checkout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-      HeaderComponent,
-      FooterComponent,
-      PublicComponent,
-        SliderComponent,
-        TabComponent,
-        ProductComponent,
-        ProdsNamePipe,
-        ProdFrameComponent,
-        BannerComponent,
-        SquareComponent,
-        ProdPagiComponent,
-        PdBarComponent,
-        ProductDetailComponent,
-      UserComponent,
-        LoginComponent,
-        CartComponent,
-        OrderComponent,
-        PageComponent,
-        SignupComponent
+    HeaderComponent,
+    FooterComponent,
+    PublicComponent,
+    SliderComponent,
+    TabComponent,
+    ProductComponent,
+    ProdsNamePipe,
+    ProdFrameComponent,
+    BannerComponent,
+    SquareComponent,
+    ProdPagiComponent,
+    PdBarComponent,
+    ProductDetailComponent,
+    UserComponent,
+    LoginComponent,
+    CartComponent,
+    OrderComponent,
+    PageComponent,
+    SignupComponent,
+    LoaderComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-      HttpClientModule,
-      SwiperModule,
-      NgxPaginationModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    SwiperModule,
+    NgxPaginationModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
