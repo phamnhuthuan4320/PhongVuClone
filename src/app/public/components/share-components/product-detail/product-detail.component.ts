@@ -19,6 +19,8 @@ export class ProductDetailComponent implements OnInit {
   cartProds: any[] = [];
   isAdded: boolean = false;
   isLoading: boolean = true;
+  isHaveLoop: boolean = false;
+  value: number[] = [];
 
   constructor(private _pro: ProductsService, private _activatedRoute: ActivatedRoute, private _router: Router) { }
 
@@ -54,9 +56,30 @@ export class ProductDetailComponent implements OnInit {
     if (!localStorage.getItem('cartProds'))
       localStorage.setItem('cartProds', JSON.stringify(this.cartProds));
 
+    if (!localStorage.getItem('value'))
+      localStorage.setItem('value', JSON.stringify(this.value));
+
     this.cartProds = JSON.parse(localStorage.getItem('cartProds'));
-    this.cartProds.push(this.prod);
-    localStorage.setItem('cartProds', JSON.stringify(this.cartProds));
+    this.value = JSON.parse(localStorage.getItem('value'));
+
+    for (let i = 0; i < this.cartProds.length; i++) {
+      if (this.prod.data._id == this.cartProds[i].data._id) {
+        this.value[i]++;
+        this.isHaveLoop = true;
+      }
+    }
+
+    if (this.isHaveLoop) {
+      localStorage.setItem('cartProds', JSON.stringify(this.cartProds));
+      localStorage.setItem('value', JSON.stringify(this.value));
+    }
+    else {
+      this.cartProds.push(this.prod);
+      this.value.push(1);
+      localStorage.setItem('cartProds', JSON.stringify(this.cartProds));
+      localStorage.setItem('value', JSON.stringify(this.value));
+    }
+
 
     this._router.navigate(['/user/cart']);
   }
@@ -65,9 +88,34 @@ export class ProductDetailComponent implements OnInit {
     if (!localStorage.getItem('cartProds'))
       localStorage.setItem('cartProds', JSON.stringify(this.cartProds));
 
+    if (!localStorage.getItem('value'))
+      localStorage.setItem('value', JSON.stringify(this.value));
+
     this.cartProds = JSON.parse(localStorage.getItem('cartProds'));
-    this.cartProds.push(this.prod);
-    localStorage.setItem('cartProds', JSON.stringify(this.cartProds));
+    this.value = JSON.parse(localStorage.getItem('value'));
+
+    for (let i = 0; i < this.cartProds.length; i++) {
+      if (this.prod.data._id == this.cartProds[i].data._id) {
+        console.log(this.prod.data._id);
+        console.log(this.cartProds[i].data._id);
+
+        this.value[i]++;
+        console.log(this.value[i]);
+        this.isHaveLoop = true;
+      }
+      console.log(i);
+    }
+
+    if (this.isHaveLoop) {
+      localStorage.setItem('cartProds', JSON.stringify(this.cartProds));
+      localStorage.setItem('value', JSON.stringify(this.value));
+    }
+    else {
+      this.cartProds.push(this.prod);
+      this.value.push(1);
+      localStorage.setItem('cartProds', JSON.stringify(this.cartProds));
+      localStorage.setItem('value', JSON.stringify(this.value));
+    }
 
     this.isAdded = true;
     setTimeout(() => {

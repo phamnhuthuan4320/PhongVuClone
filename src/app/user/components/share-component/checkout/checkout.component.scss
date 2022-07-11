@@ -25,7 +25,6 @@
                         justify-content: center;
                         align-items: center;
                         margin-bottom: 15px;
-                        border-bottom: 1px solid rgb(177, 177, 177);
 
                         .title {
                             font-size: 1.25em;
@@ -33,12 +32,40 @@
                         }
                     }
 
-                    .ten,
-                    .sdt,
-                    .position {
-                        display: flex;
-                        justify-content: center;
+                    .addDIV {
+                        border-radius: 5px;
                         margin-bottom: 5px;
+                        padding: 15px;
+
+                        .edit {
+                            color: blue;
+                            display: flex;
+                            justify-content: end;
+                            font-size: 0.8em;
+                            font-weight: bold;
+                        }
+
+                        .edit:hover{
+                            color: rgb(0, 0, 153);
+                        }
+
+                        .ten {
+                            color: blue;
+                            font-weight: bold;
+                        }
+    
+                        .ten,
+                        .sdt,
+                        .position {
+                            display: flex;
+                            justify-content: center;
+                            margin-bottom: 5px;
+                        }
+                    }
+
+                    .addDIV:hover {
+                        cursor: pointer;
+                        border: 2px solid blue !important;
                     }
                 }
 
@@ -46,6 +73,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+
                     .edit {
                         width: 75%;
                         padding: 15px;
@@ -76,7 +104,6 @@
                     margin-bottom: 15px;
                     display: flex;
                     justify-content: center;
-                    border-bottom: 1px solid rgb(177, 177, 177);
                 }
 
                 .methodDiv {
@@ -90,13 +117,12 @@
                         font-weight: bold;
                         text-align: center;
                         border-radius: 5px;
-                        border: 1px solid black;
-                        
                     }
 
                     .method:hover {
                         cursor: pointer;
-                        border: 1px solid blue;
+                        border: 2px solid blue !important;
+                        color: blue;
                     }
                 }
             }
@@ -142,18 +168,16 @@
                     padding-bottom: 10px;
 
                     .left {
-                        width: 80px;
-                        height: 80px;
-
-                        .imgDiv{
+                        .imgDiv {
+                            width: 80px;
+                            height: 80px;
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            border: 1px solid black;
+                            border: 1px solid rgb(187, 187, 187);
 
                             .img {
-                                width: 100%;
-                                height: 100%;
+                                width: 80%;
                             }
                         }
                     }
@@ -171,6 +195,7 @@
 
                         .price {
                             font-weight: bold;
+                            color: blue;
                         }
                     }
                 }
@@ -185,41 +210,45 @@
                     background-color: white;
                     border-radius: 10px;
                     padding: 15px;
-    
+
                     .title2 {
                         font-size: 1.5em;
                         font-weight: bold;
                         margin-bottom: 15px;
                     }
-    
+
                     .content {
                         display: flex;
                         justify-content: space-between;
                         margin-bottom: 10px;
-    
+
                         .text {
                             color: gray;
                             font-size: 1em;
                         }
-    
+
                         .price {
                             font-size: 1em;
                             font-weight: bold;
                         }
-    
+
+                        .promo {
+                            color: rgb(179, 179, 58);
+                        }
+
                         .redprice {
                             font-size: 1.25em;
                             font-weight: bold;
                             color: red;
                         }
                     }
-    
+
                     .vat {
                         display: flex;
                         justify-content: end;
                         color: gray;
                     }
-    
+
                     .pay {
                         color: white;
                         font-family: bold;
@@ -233,7 +262,7 @@
                         border: none;
                         width: 100%;
                     }
-    
+
                     .pay:hover {
                         cursor: pointer;
                     }

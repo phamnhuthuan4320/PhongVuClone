@@ -1,4 +1,5 @@
 <div class="wrap">
+    <app-loader *ngIf="isLoading"></app-loader>
     <div class="section">
         <div class="prod">
             <div class="diachi">
@@ -6,20 +7,30 @@
                     <div class="titleDiv">
                         <div class="title">Address</div>
                     </div>
-                    <div class="ten">Pham Van A</div>
-                    <div class="sdt">0123456789</div>
-                    <div class="position">123/A, Can Tho, Viet Nam</div>
+                    <div class="addDIV" (click)="onChooseAdd(index)"
+                        *ngFor="let address of addresses.data, let index = index"
+                        [ngStyle]="{'border': chooseAdd==index ? '2px solid blue' : '2px solid rgb(177, 177, 177)'}">
+                        <div class="edit">Edit address</div>
+                        <div class="ten">{{address.fullName}}</div>
+                        <div class="sdt">{{address.phone}}</div>
+                        <div class="position">{{address.fullAddress}}</div>
+                    </div>
                 </div>
                 <div class="btn">
                     <div class="edit">
-                        Edit address
+                        Add address
                     </div>
                 </div>
             </div>
             <div class="phuongthuc">
                 <div class="title">Payment Method</div>
                 <div class="methodDiv">
-                    <div class="method">VNPAY</div>
+                    <div class="method" (click)="onChoosePM(0)"
+                        [ngStyle]="{'border': choosePM==0 ? '2px solid blue' : '2px solid black'}">VNPAY</div>
+                    <div class="method" (click)="onChoosePM(1)"
+                        [ngStyle]="{'border': choosePM==1 ? '2px solid blue' : '2px solid black'}">STRIPE</div>
+                    <div class="method" (click)="onChoosePM(2)"
+                        [ngStyle]="{'border': choosePM==2 ? '2px solid blue' : '2px solid black'}">QRPAY</div>
                 </div>
             </div>
         </div>
@@ -29,26 +40,16 @@
                     <div class="text">Order Info</div>
                     <a [routerLink]="'/user/cart'" class="edit">Edit</a>
                 </div>
-                <div class="product">
+                <div class="product" *ngFor="let prod of chooseCart, let index = index">
                     <div class="left">
                         <div class="imgDiv">
-                            <img src="https://lh3.googleusercontent.com/o-YKRfg4iwHX_QnalEVUH0ZHI5m0AkotLbwNchbAhUbIrdBK-wyBC-K-F6J9SZuk5ruMrWSAPnAMs5f7X3I=rw" class="img">
+                            <img [src]="prod.data.image" class="img">
                         </div>
                     </div>
                     <div class="right">
-                        <div class="name">Name Name Name Name Name Name Name Name</div>                        <div class="qua">Quantity: 10</div>
-                        <div class="price">AUD 100</div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="left">
-                        <div class="imgDiv">
-                            <img src="https://lh3.googleusercontent.com/o-YKRfg4iwHX_QnalEVUH0ZHI5m0AkotLbwNchbAhUbIrdBK-wyBC-K-F6J9SZuk5ruMrWSAPnAMs5f7X3I=rw" class="img">
-                        </div>
-                    </div>
-                    <div class="right">
-                        <div class="name">Name Name Name Name Name Name Name Name</div>                        <div class="qua">Quantity: 10</div>
-                        <div class="price">AUD 100</div>
+                        <div class="name">{{prod.data.name}}</div>
+                        <div class="qua">Quantity: {{chooseValue[index]}}</div>
+                        <div class="price">AUD {{prod.data.price}}</div>
                     </div>
                 </div>
             </div>
@@ -56,16 +57,16 @@
                 <div class="div">
                     <div class="title2">Pay</div>
                     <div class="content">
-                        <span class="text">Provisional</span><span class="price">AUD 10</span>
+                        <span class="text">Provisional</span><span class="price">AUD {{provisPrice}}</span>
                     </div>
                     <div class="content">
-                        <span class="text">Delivery fee</span><span class="deli">AUD 10</span>
+                        <span class="text">Delivery fee</span><span class="deli">AUD {{deliPrice}}</span>
                     </div>
                     <div class="content">
-                        <span class="text">Discount</span><span class="promo">AUD 10</span>
+                        <span class="text">Discount</span><span class="promo">AUD {{discountPrice}}</span>
                     </div>
                     <div class="content">
-                        <span class="text">Into money</span><span class="redprice">AUD 10</span>
+                        <span class="text">Into money</span><span class="redprice">AUD {{totalPrice}}</span>
                     </div>
                     <div class="vat">(VAT included)</div>
                     <button class="pay">PAY</button>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/user/services/login.service';
-import { Login } from 'src/app/user/models/login.class';
+import { loginToken } from 'src/app/user/models/login-token.class';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -13,12 +13,12 @@ export class PageComponent implements OnInit {
 
   username: string;
   password: string;
-  account: Login;
+  loginToken: loginToken;
   isLoading: boolean = false;
   form: FormGroup;
   error: boolean = false;
 
-  constructor(private _login: LoginService, private _router: Router,public _formBuilder: FormBuilder) { }
+  constructor(private _login: LoginService, private _router: Router, public _formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     window.scroll({top: 0, behavior: "smooth"});  
@@ -33,9 +33,9 @@ export class PageComponent implements OnInit {
     this.password = this.form.get('password').value;
 
     this._login.postUser({'username': this.username, 'password': this.password}).subscribe((data) => {
-      this.account = data;
+      this.loginToken = data;
       
-      localStorage.setItem('loginToken', JSON.stringify(this.account));
+      localStorage.setItem('loginToken', JSON.stringify(this.loginToken));
       
       this._router.navigate(['']);
       

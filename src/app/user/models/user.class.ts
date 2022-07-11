@@ -1,11 +1,11 @@
-export class User {
+export class user {
     email: string;
     password: string;
     phone: string;
     firstName: string;
     lastName: string;
     dob: Date;
-    gender: boolean;
+    gender: string;
 
     constructor(email: string,
         password: string,
@@ -13,7 +13,7 @@ export class User {
         firstName: string,
         lastName: string,
         dob: Date,
-        gender: boolean) {
+        gender: string) {
         this.email = email;
         this.password = password;
         this.phone = phone;

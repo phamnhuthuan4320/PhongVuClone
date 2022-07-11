@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ownProfile } from 'src/app/user/models/own-profile.class';
+import { OwnProfileService } from 'src/app/user/services/own-profile.service';
 
 @Component({
   selector: 'app-header',
@@ -11,15 +13,23 @@ export class HeaderComponent implements OnInit {
   display: boolean = true;
   width: string = '140%';  
   isLogin: boolean = false;
+  ownProfile: ownProfile;
 
-  constructor(private _router: Router) { }
+  constructor(private _router: Router, private _ownProfile: OwnProfileService) { }
 
   ngOnInit(): void {
-    if(localStorage.getItem('loginToken'))  this.isLogin = true;
     setInterval(() => {
       if(this.width == '140%')  this.width = '130%';
       else  this.width = '140%';
     },5000)
+
+    if(localStorage.getItem('loginToken'))  this.isLogin = true;
+
+    if(this.isLogin){
+      this._ownProfile.getOwnProfile().subscribe((data) => {
+        this.ownProfile = data;
+      })
+    }
   }
 
   onClose(){
@@ -35,10 +45,18 @@ export class HeaderComponent implements OnInit {
 
   onGetLoginToken(){
     if(localStorage.getItem('loginToken'))  this.isLogin = true;
+
+    if(this.isLogin){
+      this._ownProfile.getOwnProfile().subscribe((data) => {
+        this.ownProfile = data;
+      })
+    }
   }
 
   onLogout(){
     localStorage.removeItem('loginToken');
+    localStorage.removeItem('cartProds');
+    localStorage.removeItem('value');
     this.isLogin = false;
   }
 

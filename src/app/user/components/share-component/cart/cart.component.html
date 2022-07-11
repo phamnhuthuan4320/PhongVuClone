@@ -47,9 +47,9 @@
                 </div>
                 <div class="amount">
                     <div class="div1">
-                        <span class="tru">-</span>
-                        <input type="text" value="1">
-                        <span class="cong">+</span>
+                        <span class="tru" (click)="onExceptAmount(index, prod.data.price)">-</span>
+                        <input type="text" [value]="value[index]">
+                        <span class="cong" (click)="onPlusAmount(index, prod.data.price)">+</span>
                     </div>
                     <div class="div2" (click)="onErase(index, prod.data.price)">
                         Erase

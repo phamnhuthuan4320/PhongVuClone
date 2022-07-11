@@ -1,1 +1,45 @@
-<p>user works!</p>
+<div class="wrap">
+    <app-loader *ngIf="isLoading"></app-loader>
+    <div class="formDiv">
+        <div class="title">User Information</div>
+        <form>
+            <div class="inputDiv">
+                <div class="name">First name</div>
+                <input type="text" name="first" [ngModel]="ownProfile.data.firstName"
+                    (ngModelChange)="ownProfile.data.firstName=$event">
+            </div>
+            <div class="inputDiv">
+                <div class="name">Last name</div>
+                <input type="text" name="last" [ngModel]="ownProfile.data.lastName"
+                (ngModelChange)="ownProfile.data.lastName=$event">
+            </div>
+            <div class="inputDiv">
+                <div class="name">Email</div>
+                <div class="email">{{ownProfile.data.email}}</div>
+            </div>
+            <div class="inputDiv">
+                <div class="name">Phone</div>
+                <input type="text" name="phone" [ngModel]="ownProfile.data.phone"
+                (ngModelChange)="ownProfile.data.phone=$event">
+            </div>
+            <div class="inputDiv">
+                <div class="name">Date of birth</div>
+                <input type="date" name="dob" [ngModel]="ownProfile.data.dob| date :'yyyy-MM-dd'"
+                    (ngModelChange)="ownProfile.data.dob=$event" pattern="\d{4}-\d{2}-\d{2}">
+            </div>
+            <div class="inputRadio">
+                <div class="name">Gender</div>
+                <div class="radioDiv">
+                    <input type="radio" name="gender" [value]="'male'" [ngModel]="ownProfile.data.gender"
+                    (ngModelChange)="ownProfile.data.gender=$event" [checked]="ownProfile.data.gender=='male'">
+                    <div class="text">Male</div>
+                    <input type="radio" name="gender" [value]="'female'" [ngModel]="ownProfile.data.gender"
+                    (ngModelChange)="ownProfile.data.gender=$event" [checked]="ownProfile.data.gender=='female'">
+                    <div class="text">Female</div>
+                </div>
+            </div>
+            <button class="btn" (click)="onUpdate()">Update</button>
+            <div class="updated" *ngIf="isUpdated">Updated !</div>
+        </form>
+    </div>
+</div>

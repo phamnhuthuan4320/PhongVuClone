@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Login } from '../models/login.class';
+import { loginToken } from '../models/login-token.class';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
@@ -12,7 +12,7 @@ export class LoginService {
 
   constructor(private _http: HttpClient) {}
 
-  postUser(account: {}): Observable<Login>{
-    return this._http.post<Login>(this.API, account);
+  postUser(account: {}): Observable<loginToken>{
+    return this._http.post<loginToken>(this.API, account);
   }
 }

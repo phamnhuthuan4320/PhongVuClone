@@ -118,75 +118,12 @@
             flex-direction: column;
             align-items: center;
             font-size: 1em;
-            
+
             position: relative;
 
             &__icon {
                 margin-bottom: 10px;
                 font-size: 2em;
-            }
-
-            .divCart {
-                background-color: rgb(255, 255, 255);
-                width: 370px;
-                height: 370px;
-                position: absolute;
-                top: 56px;
-                right: 0px;
-                border-radius: 10px;
-                box-shadow: 0px 0px 12px -5px #000000;
-                display: none;
-                background-image: url('https://i.imgur.com/Drj57qu.png');
-                background-size: 50%;
-                background-position: center;
-                background-repeat: no-repeat;
-            }
-
-            // .divCart:hover {
-            //     display: block;
-            // }
-
-            .divNoti {
-                background-color: rgb(255, 255, 255);
-                width: 370px;
-                height: 370px;
-                position: absolute;
-                top: 56px;
-                right: 0px;
-                border-radius: 10px;
-                box-shadow: 0px 0px 12px -5px #000000;
-                display: none;
-                background-image: url('https://shopfront-cdn.tekoapis.com/static/e536f0592aa3c8b1.png');
-                background-size: 50%;
-                background-position: center;
-                background-repeat: no-repeat;
-            }
-            
-            // .divNoti:hover {
-            //     display: block;
-            // }
-            
-            .divLogin {
-                background-color: rgb(255, 255, 255);
-                position: absolute;
-                top: 56px;
-                right: 0px;
-                border-radius: 10px;
-                padding: 15px;
-                box-shadow: 0px 0px 12px -5px #000000;
-                display: none;
-
-                .btnLogout {
-                    padding: 10px 50px;
-                    background-color: blue;
-                    color: white;
-                    border-radius: 10px;
-                }
-
-                .btnLogout:hover {
-                    cursor: pointer;
-                    background-color: rgb(0, 0, 145);
-                }
             }
         }
 
@@ -195,15 +132,84 @@
             cursor: pointer;
         }
 
-        // &__tagCart:hover .divCart {
-        //     display: block;
-        // }
+        &__tagLogin:hover~.divLogin {
+            display: block;
+        }
 
-        // &__tagNoti:hover .divNoti {
-        //     display: block;
-        // }
+        .divLogin {
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            top: 79px;
+            right: 225px;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0px 0px 12px -5px #000000;
+            display: none;
+            z-index: 100;
 
-        &__tagLogin:hover .divLogin {
+            .imgDiv {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10px;
+
+                .img {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    border: 1px solid black;
+                }
+            }
+
+            .email {
+                padding-bottom: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: blue;
+                font-weight: bold;
+
+            }
+
+            a {
+                text-decoration: none;
+
+                .info {
+                    color: black;
+                    padding: 5px;
+                }
+
+                .info:hover {
+                    background-color: rgb(211, 201, 201);
+                    border-radius: 5px;
+                }
+
+                .address {
+                    color: black;
+                    padding: 5px;
+                }
+
+                .address:hover {
+                    background-color: rgb(211, 201, 201);
+                    border-radius: 5px;
+                }
+            }
+
+            .btnLogout {
+                padding: 10px 50px;
+                background-color: blue;
+                color: white;
+                border-radius: 10px;
+                margin-top: 5px;
+            }
+
+            .btnLogout:hover {
+                cursor: pointer;
+                background-color: rgb(0, 0, 145);
+            }
+        }
+
+        .divLogin:hover {
             display: block;
         }
     }

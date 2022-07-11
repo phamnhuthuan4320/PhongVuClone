@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { LoginGuard } from './user/services/guard/login.guard';
+import { SignupGuard } from './user/services/guard/signup.guard';
+
 import { PublicComponent } from './public/components/public/public.component';
 import { ProductDetailComponent } from './public/components/share-components/product-detail/product-detail.component';
 import { UserComponent } from './user/components/user/user.component';
@@ -39,6 +42,7 @@ const routes: Routes = [
       },
       {
         path: 'login',
+        canActivate: [SignupGuard],
         children: [
           {
             path: '',
@@ -56,18 +60,25 @@ const routes: Routes = [
       },
       {
         path: 'cart',
+        canActivate: [LoginGuard],
         component: CartComponent
       },
       {
         path: 'order',
+        canActivate: [LoginGuard],
         component: OrderComponent
       },
       {
         path: 'checkout',
+        canActivate: [LoginGuard],
         component: CheckoutComponent
       }
     ]
-  }
+  },
+  {
+    path: '**',
+    component: PublicComponent
+}
 ];
 
 @NgModule({
