@@ -7,7 +7,8 @@ export class user {
     dob: Date;
     gender: string;
 
-    constructor(email: string,
+    constructor(
+        email: string,
         password: string,
         phone: string,
         firstName: string,

@@ -17,6 +17,10 @@ export class PageComponent implements OnInit {
   isLoading: boolean = false;
   form: FormGroup;
   error: boolean = false;
+  isForgotClicked: boolean = false;
+  isForgotEmail: boolean = false;
+  isResetClicked: boolean = false;
+  isResetPass: boolean = false;
 
   constructor(private _login: LoginService, private _router: Router, public _formBuilder: FormBuilder) { }
 
@@ -54,6 +58,65 @@ export class PageComponent implements OnInit {
 
   onResetForm() {
     this.form.reset();
+  }
+
+  onForgotClicked(){
+    this.username = this.form.get('email').value;
+
+    if(this.username == '' || this.username == null){
+      this.isForgotEmail = true;
+
+      setTimeout(() => {
+        this.isForgotEmail = false;
+      }, 3000);
+    }
+    else {
+      let resetPassToken: string;
+
+      this.isLoading = true;
+
+      this._login.postForgot({'email': this.username}).subscribe(data => {
+        resetPassToken = data;
+
+        localStorage.setItem('resetPassToken', JSON.stringify(resetPassToken));
+
+        this.isLoading = false;
+
+        this.isForgotClicked = true;
+
+        setTimeout(() => {
+          this.isForgotClicked = false;
+        }, 3000);
+      })
+    }
+  }
+
+  onResetClicked(){
+    this.password = this.form.get('password').value;
+
+    if(this.password == '' || this.password == null){
+      this.isResetPass = true;
+
+      setTimeout(() => {
+        this.isResetPass = false;
+      }, 3000);
+    }
+    else {
+      let resetPassToken = JSON.parse(localStorage.getItem('resetPassToken'));
+
+      this.isLoading = true;
+
+      this._login.postResetPass({'token': resetPassToken.data.resetPasswordToken, 'newPassword': this.password}).subscribe(data => {
+
+        this.isLoading = false;
+
+        this.isResetClicked = true;
+
+        setTimeout(() => {
+          this.isResetClicked = false;
+        }, 3000);
+      })
+    }
   }
 
 }

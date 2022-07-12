@@ -17,6 +17,7 @@
                 </div>
                 <div class="alert" *ngIf="form.controls.email.dirty && form.controls.email.errors?.pattern">Email
                     invalidate</div>
+                <div class="alert" *ngIf="isForgotEmail">Email is required</div>
                 <div class="pass">
                     <div class="title">Password</div>
                     <input type="password" name="password" formControlName="password">
@@ -24,10 +25,13 @@
                 <div class="alert"
                     *ngIf="form.controls.password.dirty && form.controls.password.errors?.required">Password is required
                 </div>
+                <div class="alert" *ngIf="isResetPass">Password is required</div>
                 <div class="div">
-                    <span class="text">Forgot password</span>
-                    <span class="text">Reset password</span>
+                    <span class="text" (click)="onForgotClicked()">Forgot password</span>
+                    <span class="text" (click)="onResetClicked()">Reset password</span>
                 </div>
+                <div class="forgotClicked" *ngIf="isForgotClicked">Verification code has been sent to your email</div>
+                <div class="forgotClicked" *ngIf="isResetClicked">Password is reseted</div>
                 <button class="face" (click)="onLogin()" [disabled]="form.invalid">
                     <span class="ftext">Login</span>
                 </button>

@@ -66,7 +66,7 @@
             }
 
             .div {
-                margin-bottom: 20px;
+                margin-bottom: 10px;
                 display: flex;
                 justify-content: space-between;
 
@@ -78,6 +78,15 @@
                     cursor: pointer;
                     color: rgb(196, 36, 36);
                 }
+            }
+
+            .forgotClicked {
+                margin-bottom: 20px;
+                background-color: rgb(89, 253, 89);
+                padding: 10px;
+                text-align: center;
+                font-weight: bold;
+                border-radius: 10px;
             }
 
             .face {

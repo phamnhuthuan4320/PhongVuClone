@@ -1,1 +1,51 @@
-<p>signup works!</p>
+<div class="wrap">
+    <app-loader *ngIf="isLoading"></app-loader>
+    <div class="formDiv">
+        <div class="title">Create Account</div>
+        <form>
+            <div class="inputDiv">
+                <div class="name">Email</div>
+                <input type="text" name="email" [ngModel]="user.email"
+                    (ngModelChange)="user.email=$event">
+            </div>
+            <div class="inputDiv">
+                <div class="name">Password</div>
+                <input type="password" name="pass" [ngModel]="user.password"
+                (ngModelChange)="user.password=$event">
+            </div>
+            <div class="inputDiv">
+                <div class="name">Phone</div>
+                <input type="text" name="phone" [ngModel]="user.phone"
+                (ngModelChange)="user.phone=$event">
+            </div>
+            <div class="inputDiv">
+                <div class="name">First name</div>
+                <input type="text" name="first" [ngModel]="user.firstName"
+                (ngModelChange)="user.firstName=$event">
+            </div>
+            <div class="inputDiv">
+                <div class="name">Last name</div>
+                <input type="text" name="last" [ngModel]="user.lastName"
+                (ngModelChange)="user.lastName=$event">
+            </div>
+            <div class="inputDiv">
+                <div class="name">Date of birth</div>
+                <input type="date" name="dob" [ngModel]="user.dob| date :'yyyy-MM-dd'"
+                    (ngModelChange)="user.dob=$event" pattern="\d{4}-\d{2}-\d{2}">
+            </div>
+            <div class="inputRadio">
+                <div class="name">Gender</div>
+                <div class="radioDiv">
+                    <input type="radio" name="gender" [value]="'male'" [ngModel]="user.gender"
+                    (ngModelChange)="user.gender=$event" [checked]="user.gender=='male'">
+                    <div class="text">Male</div>
+                    <input type="radio" name="gender" [value]="'female'" [ngModel]="user.gender"
+                    (ngModelChange)="user.gender=$event" [checked]="user.gender=='female'">
+                    <div class="text">Female</div>
+                </div>
+            </div>
+            <button class="btn" (click)="onCreate()">Create</button>
+            <div class="updated" *ngIf="isCreated">Created !</div>
+        </form>
+    </div>
+</div>

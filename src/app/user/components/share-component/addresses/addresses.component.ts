@@ -52,6 +52,13 @@ export class AddressesComponent implements OnInit {
   }
 
   onCancelEdit() {
+    this.isLoading = true;
+    
+    this._addresses.getAddresses().subscribe((data) => {
+      this.addresses = data;
+
+      this.isLoading = false;
+    })
     this.isEditing = false;
 
     window.scroll({ top: 0, behavior: "smooth" });
