@@ -9,8 +9,8 @@ export class addresses {
             district: string;
             city: string;
             country: string;
-            latitude: number;
-            longitude: number;
+            latitude: string;
+            longitude: string;
             isDefault: boolean
             user: string;
             createdAt: string;
@@ -31,8 +31,8 @@ export class addresses {
             district: string;
             city: string;
             country: string;
-            latitude: number;
-            longitude: number;
+            latitude: string;
+            longitude: string;
             isDefault: boolean
             user: string;
             createdAt: string;

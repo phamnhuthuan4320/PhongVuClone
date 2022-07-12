@@ -1,0 +1,169 @@
+<div class="wrap">
+    <app-loader *ngIf="isLoading"></app-loader>
+    <div class="text" *ngIf="!isEditing && !isAdding">
+        <div class="titleDiv">
+            <div class="title">Address</div>
+        </div>
+        <div class="btn">
+            <div class="edit" (click)="onChooseAdd()">
+                Add address
+            </div>
+        </div>
+        <div class="addDIV" *ngFor="let address of addresses.data, let index = index">
+            <div class="change">
+                <span class="edit" (click)="onChooseEdit(address)">Edit address</span>
+                <span class="default" *ngIf="address.isDefault">Default</span>
+                <span class="remove" (click)="onDeleteAddress(address)">Remove address</span>
+            </div>
+            <div class="ten">{{address.fullName}}</div>
+            <div class="sdt">{{address.phone}}</div>
+            <div class="position">{{address.fullAddress}}</div>
+        </div>
+    </div>
+    <div class="formDiv" *ngIf="isEditing">
+        <div class="title">User Address</div>
+        <form>
+            <div class="inputDiv">
+                <div class="name">Full name</div>
+                <input type="text" name="full"
+                [ngModel]="chooseAddress.fullName"
+                (ngModelChange)="chooseAddress.fullName=$event">
+            </div>
+            <div class="inputDiv">
+                <div class="name">Phone</div>
+                <input type="text" name="phone"
+                [ngModel]="chooseAddress.phone"
+                (ngModelChange)="chooseAddress.phone=$event">
+            </div>
+            <div class="inputDiv">
+                <div class="name">Country</div>
+                <input type="text" name="country"
+                [ngModel]="chooseAddress.country"
+                (ngModelChange)="chooseAddress.country=$event">
+            </div>
+            <div class="inputDiv">
+                <div class="name">City</div>
+                <select name="city"
+                [ngModel]="chooseAddress.city"
+                (ngModelChange)="chooseAddress.city=$event">
+                    <option value="Hanoi City">Hanoi City</option>
+                    <option value="Haiphong City">Haiphong City</option>
+                    <option value="Danang City">Danang City</option>
+                    <option value="HCM City">HCM City</option>
+                    <option value="Cantho City">Cantho City</option>
+                </select>
+            </div>
+            <div class="inputDiv">
+                <div class="name">District</div>
+                <select name="district"
+                [ngModel]="chooseAddress.district"
+                (ngModelChange)="chooseAddress.district=$event">
+                    <option value="1 District">1 District</option>
+                    <option value="2 District">2 District</option>
+                    <option value="3 District">3 District</option>
+                    <option value="4 District">4 District</option>
+                    <option value="5 District">5 District</option>
+                </select>
+            </div>
+            <div class="inputDiv">
+                <div class="name">Ward</div>
+                <select name="ward"
+                [ngModel]="chooseAddress.ward"
+                (ngModelChange)="chooseAddress.ward=$event">
+                    <option value="1 Ward">1 Ward</option>
+                    <option value="2 Ward">2 Ward</option>
+                    <option value="3 Ward">3 Ward</option>
+                    <option value="4 Ward">4 Ward</option>
+                    <option value="5 Ward">5 Ward</option>
+                </select>
+            </div>
+            <div class="inputDiv">
+                <div class="name">Address</div>
+                <input type="text" name="address"
+                [ngModel]="chooseAddress.address"
+                (ngModelChange)="chooseAddress.address=$event">
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="default"
+                [ngModel]="chooseAddress.isDefault"
+                (ngModelChange)="chooseAddress.isDefault=$event">
+                <span class="text">Default</span>
+            </div>
+            <button class="btn update" (click)="onUpdate()">Update</button>
+            <button class="btn cancel" (click)="onCancelEdit()">Cancel</button>
+        </form>
+    </div>
+    <div class="formDiv" *ngIf="isAdding">
+        <div class="title">User Address</div>
+        <form>
+            <div class="inputDiv">
+                <div class="name">Full name</div>
+                <input type="text" name="full"
+                [ngModel]="chooseAddress.fullName"
+                (ngModelChange)="chooseAddress.fullName=$event">
+            </div>
+            <div class="inputDiv">
+                <div class="name">Phone</div>
+                <input type="text" name="phone"
+                [ngModel]="chooseAddress.phone"
+                (ngModelChange)="chooseAddress.phone=$event">
+            </div>
+            <div class="inputDiv">
+                <div class="name">Country</div>
+                <input type="text" name="country"
+                [ngModel]="chooseAddress.country"
+                (ngModelChange)="chooseAddress.country=$event">
+            </div>
+            <div class="inputDiv">
+                <div class="name">City</div>
+                <select name="city"
+                [ngModel]="chooseAddress.city"
+                (ngModelChange)="chooseAddress.city=$event">
+                    <option value="Hanoi City">Hanoi City</option>
+                    <option value="Haiphong City">Haiphong City</option>
+                    <option value="Danang City">Danang City</option>
+                    <option value="HCM City">HCM City</option>
+                    <option value="Cantho City">Cantho City</option>
+                </select>
+            </div>
+            <div class="inputDiv">
+                <div class="name">District</div>
+                <select name="district"
+                [ngModel]="chooseAddress.district"
+                (ngModelChange)="chooseAddress.district=$event">
+                    <option value="1 District">1 District</option>
+                    <option value="2 District">2 District</option>
+                    <option value="3 District">3 District</option>
+                    <option value="4 District">4 District</option>
+                    <option value="5 District">5 District</option>
+                </select>
+            </div>
+            <div class="inputDiv">
+                <div class="name">Ward</div>
+                <select name="ward"
+                [ngModel]="chooseAddress.ward"
+                (ngModelChange)="chooseAddress.ward=$event">
+                    <option value="1 Ward">1 Ward</option>
+                    <option value="2 Ward">2 Ward</option>
+                    <option value="3 Ward">3 Ward</option>
+                    <option value="4 Ward">4 Ward</option>
+                    <option value="5 Ward">5 Ward</option>
+                </select>
+            </div>
+            <div class="inputDiv">
+                <div class="name">Address</div>
+                <input type="text" name="address"
+                [ngModel]="chooseAddress.address"
+                (ngModelChange)="chooseAddress.address=$event">
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="default"
+                [ngModel]="chooseAddress.isDefault"
+                (ngModelChange)="chooseAddress.isDefault=$event">
+                <span class="text">Default</span>
+            </div>
+            <button class="btn update" (click)="onAdd()">Add</button>
+            <button class="btn cancel" (click)="onCancelAdd()">Cancel</button>
+        </form>
+    </div>
+</div>

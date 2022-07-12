@@ -30,7 +30,6 @@ export class CartComponent implements OnInit {
   constructor(private _router: Router) { }
 
   ngOnInit(): void {
-    console.log('start');
     window.scroll({ top: 0, behavior: "smooth" });
 
     this.cartProds = JSON.parse(localStorage.getItem('cartProds'));
@@ -188,10 +187,6 @@ export class CartComponent implements OnInit {
         this.totalCheck = true;
       }
     }
-    // console.log('isCheckAll: ', this.isCheckAll);
-    // console.log('totalCheck: ', this.totalCheck);
-    // console.log('isUncheckAll: ', this.isUncheckAll);
-    // console.log('prodCheck: ', this.prodCheck);
   }
 
   onChooseAll() {

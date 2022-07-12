@@ -40,6 +40,7 @@ import { LoginComponent } from './user/components/share-component/login/login.co
 import { PageComponent } from './user/components/share-component/login/page/page.component';
 import { SignupComponent } from './user/components/share-component/login/signup/signup.component';
 import { CheckoutComponent } from './user/components/share-component/checkout/checkout.component';
+import { AddressesComponent } from './user/components/share-component/addresses/addresses.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { CheckoutComponent } from './user/components/share-component/checkout/ch
     PageComponent,
     SignupComponent,
     LoaderComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    AddressesComponent
   ],
   imports: [
     BrowserModule,

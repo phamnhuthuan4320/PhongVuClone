@@ -57,7 +57,10 @@ export class HeaderComponent implements OnInit {
     localStorage.removeItem('loginToken');
     localStorage.removeItem('cartProds');
     localStorage.removeItem('value');
+
     this.isLogin = false;
+
+    this._router.navigate(['']);
   }
 
 }

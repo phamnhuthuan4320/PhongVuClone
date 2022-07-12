@@ -85,41 +85,47 @@ export class ProductDetailComponent implements OnInit {
   }
 
   onAdd() {
-    if (!localStorage.getItem('cartProds'))
-      localStorage.setItem('cartProds', JSON.stringify(this.cartProds));
+    if (localStorage.getItem('loginToken')) {
+      if (!localStorage.getItem('cartProds'))
+        localStorage.setItem('cartProds', JSON.stringify(this.cartProds));
 
-    if (!localStorage.getItem('value'))
-      localStorage.setItem('value', JSON.stringify(this.value));
+      if (!localStorage.getItem('value'))
+        localStorage.setItem('value', JSON.stringify(this.value));
 
-    this.cartProds = JSON.parse(localStorage.getItem('cartProds'));
-    this.value = JSON.parse(localStorage.getItem('value'));
+      this.cartProds = JSON.parse(localStorage.getItem('cartProds'));
+      this.value = JSON.parse(localStorage.getItem('value'));
 
-    for (let i = 0; i < this.cartProds.length; i++) {
-      if (this.prod.data._id == this.cartProds[i].data._id) {
-        console.log(this.prod.data._id);
-        console.log(this.cartProds[i].data._id);
+      for (let i = 0; i < this.cartProds.length; i++) {
+        if (this.prod.data._id == this.cartProds[i].data._id) {
+          console.log(this.prod.data._id);
+          console.log(this.cartProds[i].data._id);
 
-        this.value[i]++;
-        console.log(this.value[i]);
-        this.isHaveLoop = true;
+          this.value[i]++;
+          console.log(this.value[i]);
+          this.isHaveLoop = true;
+        }
+        console.log(i);
       }
-      console.log(i);
-    }
 
-    if (this.isHaveLoop) {
-      localStorage.setItem('cartProds', JSON.stringify(this.cartProds));
-      localStorage.setItem('value', JSON.stringify(this.value));
+      if (this.isHaveLoop) {
+        localStorage.setItem('cartProds', JSON.stringify(this.cartProds));
+        localStorage.setItem('value', JSON.stringify(this.value));
+      }
+      else {
+        this.cartProds.push(this.prod);
+        this.value.push(1);
+        localStorage.setItem('cartProds', JSON.stringify(this.cartProds));
+        localStorage.setItem('value', JSON.stringify(this.value));
+      }
+
+      this.isAdded = true;
+      setTimeout(() => {
+        this.isAdded = false;
+      }, 3000);
     }
     else {
-      this.cartProds.push(this.prod);
-      this.value.push(1);
-      localStorage.setItem('cartProds', JSON.stringify(this.cartProds));
-      localStorage.setItem('value', JSON.stringify(this.value));
+      this._router.navigate(['/user/login']);
     }
-
-    this.isAdded = true;
-    setTimeout(() => {
-      this.isAdded = false;
-    }, 3000);
   }
+
 }

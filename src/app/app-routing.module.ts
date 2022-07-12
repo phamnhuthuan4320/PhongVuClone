@@ -13,6 +13,7 @@ import { SignupComponent } from './user/components/share-component/login/signup/
 import { CartComponent } from './user/components/share-component/cart/cart.component';
 import { CheckoutComponent } from './user/components/share-component/checkout/checkout.component';
 import { OrderComponent } from './user/components/share-component/order/order.component';
+import { AddressesComponent } from './user/components/share-component/addresses/addresses.component';
 
 const routes: Routes = [
   {
@@ -38,6 +39,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
+        canActivate: [LoginGuard],
         component: UserComponent,
       },
       {
@@ -72,6 +74,11 @@ const routes: Routes = [
         path: 'checkout',
         canActivate: [LoginGuard],
         component: CheckoutComponent
+      },
+      {
+        path: 'addresses',
+        canActivate: [LoginGuard],
+        component: AddressesComponent
       }
     ]
   },

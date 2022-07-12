@@ -12,16 +12,6 @@
             <div class="prod__img">
                 <div class="big"><img [src]="prod.data.image" class="big_img"></div>
                 <div class="small"><img [src]="prod.data.image" class="small_img"></div>
-                <div class="text">
-                    - Genuine, 100% New, Sealed <br>
-                    - Screen: AMOLED 6.43" - 90 Hz refresh rate <br>
-                    - Rear camera: 8MP, 2x 2MP, 108MP <br>
-                    - Front camera: 16MP <br>
-                    - CPU: MediaTek Helio G96 <br>
-                    - Memory: 128GB <br>
-                    - RAM: 8GB <br>
-                    - OS: Android
-                </div>
             </div>
             <div class="prod__basicInfo">
                 <div class="title">
@@ -134,7 +124,7 @@
                     <div class="add" (click)="onAdd()">ADD TO CART</div>
                 </div>
                 <div class="addedDiv" *ngIf="isAdded">
-                    <div class="added" >
+                    <div class="added">
                         <div class="noti">
                             Add product to cart SUCCESS !
                         </div>
