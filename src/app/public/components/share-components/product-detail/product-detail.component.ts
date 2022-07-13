@@ -97,14 +97,11 @@ export class ProductDetailComponent implements OnInit {
 
       for (let i = 0; i < this.cartProds.length; i++) {
         if (this.prod.data._id == this.cartProds[i].data._id) {
-          console.log(this.prod.data._id);
-          console.log(this.cartProds[i].data._id);
 
           this.value[i]++;
-          console.log(this.value[i]);
+          
           this.isHaveLoop = true;
         }
-        console.log(i);
       }
 
       if (this.isHaveLoop) {
