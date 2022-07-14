@@ -1,0 +1,44 @@
+.wrap {
+    background-color: white ;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0px 5px 0px;
+    position: relative;
+
+    .formDiv{
+        width: 100%;
+
+        .inputDiv {
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 15px;
+            background-color: blue;
+            border: none;
+            margin-top: 5px;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            cursor: pointer;
+            background-color: rgb(0, 0, 138);
+        }
+
+        .btnAdded {
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(16, 214, 16);
+            border: none;
+            color: black;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+}

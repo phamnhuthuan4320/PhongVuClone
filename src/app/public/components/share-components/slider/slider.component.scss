@@ -87,6 +87,7 @@
     
         &__ul1 {
             list-style: none;
+            margin-bottom: 0px;
         }
     
         &__li1 {
@@ -118,7 +119,7 @@
         }
 
         .hiddenMenu{
-            width: 1000px;
+            width: 500px;
             display: none;
 
             .title {
@@ -158,13 +159,12 @@
         position: absolute;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 3%;
+        gap: 50px;
 
         &__content {
             display: flex;
             justify-content: center;
-            width: 296px;
-            height: 140px;
+            width: 100%;
             box-sizing: border-box;
             overflow: hidden;
             border-radius: 10px;
@@ -177,9 +177,8 @@
             }
             .img{
                 border-radius: 10px;
-                
-                width: 296px;
-                height: 140px;
+                height: 105%;
+                width: 105%;
                 transition: all 750ms;
             }
         }

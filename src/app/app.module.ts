@@ -8,6 +8,7 @@ import { SwiperModule } from "swiper/angular";
 import { NgxPaginationModule } from 'ngx-pagination';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
+import { NgxStripeModule } from 'ngx-stripe';
 
 //Pipes
 import { ProdsNamePipe } from './public/pipes/prods-name.pipe';
@@ -41,6 +42,7 @@ import { PageComponent } from './user/components/share-component/login/page/page
 import { SignupComponent } from './user/components/share-component/login/signup/signup.component';
 import { CheckoutComponent } from './user/components/share-component/checkout/checkout.component';
 import { AddressesComponent } from './user/components/share-component/addresses/addresses.component';
+import { StripeComponent } from './user/components/share-component/stripe/stripe.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +68,8 @@ import { AddressesComponent } from './user/components/share-component/addresses/
     SignupComponent,
     LoaderComponent,
     CheckoutComponent,
-    AddressesComponent
+    AddressesComponent,
+    StripeComponent
   ],
   imports: [
     BrowserModule,
@@ -77,7 +80,8 @@ import { AddressesComponent } from './user/components/share-component/addresses/
     SwiperModule,
     NgxPaginationModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    NgxStripeModule.forRoot('pk_test_51KxEc0JsyzcmxeMthvDJvy8lLHbDXIU3uggTgPC4oXvUDwL1DNt7srJwYKzzJyG7NLDv9MjprFy7DZPgoHxieMaS00tFsI8FNI'),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,18 @@
-<p>order works!</p>
+<div class="wrap">
+    <div class="div">
+        <div class="titleDiv">
+            <div class="id">#</div>
+            <div class="name">Name</div>
+            <div class="add">Address</div>
+            <div class="price">Total price</div>
+            <div class="date">Date create</div>
+        </div>
+        <div class="orderDiv" *ngFor="let item of orders.data, let index = index">
+            <div class="id">{{index}}</div>
+            <div class="name">Thuan</div>
+            <div class="add">HCM City</div>
+            <div class="price">400</div>
+            <div class="date">25/2</div>
+        </div>
+    </div>
+</div>

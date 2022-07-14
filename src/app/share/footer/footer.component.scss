@@ -8,7 +8,7 @@
 }
 
 .policy {
-    padding: 0px 50px 0px 50px;
+    padding: 50px 50px 0px 50px;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -17,7 +17,7 @@
         &__title {
             font-weight: bold;
             font-size: 1em;
-            line-height: 50px;
+            margin-bottom: 50px;
         }
 
         &__list {

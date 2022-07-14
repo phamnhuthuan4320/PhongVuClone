@@ -50,7 +50,7 @@
                             color: blue;
                             font-weight: bold;
                         }
-    
+
                         .ten,
                         .sdt,
                         .position {
@@ -70,8 +70,9 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    padding: 0px;
 
-                    .edit {
+                    .add {
                         width: 100%;
                         padding: 15px;
                         background-color: blue;
@@ -82,7 +83,7 @@
                         text-align: center;
                     }
 
-                    .edit:hover {
+                    .add:hover {
                         cursor: pointer;
                         background-color: rgb(0, 0, 151);
                     }
@@ -94,7 +95,7 @@
                 width: 100%;
                 border-radius: 10px;
                 padding: 15px;
-        
+
                 .title {
                     display: flex;
                     justify-content: center;
@@ -103,23 +104,23 @@
                     font-size: 1.5em;
                     margin-bottom: 30px;
                 }
-        
+
                 .inputDiv {
                     margin-bottom: 20px;
-        
+
                     .name {
                         font-size: 1em;
                         font-weight: bold;
                         margin-bottom: 5px;
                     }
-        
+
                     input {
                         padding: 10px;
                         border: 1px solid rgb(187, 187, 187);
                         border-radius: 5px;
                         width: 100%;
                     }
-        
+
                     select {
                         padding: 10px;
                         border: 1px solid rgb(187, 187, 187);
@@ -127,23 +128,23 @@
                         width: 100%;
                     }
                 }
-        
+
                 .checkbox {
                     display: flex;
                     justify-content: start;
                     align-items: center;
                     margin-bottom: 20px;
-        
+
                     input {
                         margin-right: 10px;
                     }
-        
+
                     .text {
                         font-weight: bold;
                         padding: 2px 0px 0px 0px;
                     }
                 }
-        
+
                 .btn {
                     padding: 10px 20px;
                     background-color: blue;
@@ -151,18 +152,18 @@
                     border-radius: 5px;
                     border: none;
                 }
-        
+
                 .btn:hover {
                     cursor: pointer;
                     background-color: rgb(0, 0, 170);
                 }
-        
+
                 .cancel {
                     background-color: yellow;
                     color: black;
                     margin-left: 15px;
                 }
-        
+
                 .cancel:hover {
                     background-color: rgb(184, 184, 0);
                 }
@@ -173,6 +174,10 @@
                 border-radius: 10px;
                 margin-bottom: 20px;
                 padding: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
 
                 .title {
                     font-size: 1.25em;
@@ -183,9 +188,11 @@
                 }
 
                 .methodDiv {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr 1fr;
-                    gap: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 100%;
+
 
                     .method {
                         padding: 15px;
@@ -193,6 +200,20 @@
                         font-weight: bold;
                         text-align: center;
                         border-radius: 5px;
+                        margin-bottom: 5px;
+
+                        .remove {
+                            color: red;
+                            font-size: 0.8em;
+                            display: flex;
+                            justify-content: end;
+                            align-items: center;
+                        }
+
+                        .remove:hover {
+                            cursor: pointer;
+                            color: rgb(153, 0, 0);
+                        }
                     }
 
                     .method:hover {
@@ -200,6 +221,44 @@
                         border: 2px solid blue !important;
                         color: blue !important;
                     }
+                }
+
+                .btn {
+                    width: 100%;
+                    padding: 15px;
+                    background-color: blue;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 1em;
+                    border-radius: 5px;
+                    text-align: center;
+                }
+
+                .btn:hover {
+                    cursor: pointer;
+                    background-color: rgb(0, 0, 151);
+                }
+            }
+
+            .addPMDiv {
+                background-color: white;
+                padding: 15px;
+                border-radius: 10px;
+
+                .btn {
+                    width: 100%;
+                    padding: 15px;
+                    background-color: blue;
+                    border: none;
+                    color: white;
+                    border-radius: 5px;
+                    font-weight: bold;
+                    text-align: center;
+                }
+        
+                .btn:hover {
+                    cursor: pointer;
+                    background-color: rgb(0, 0, 138);
                 }
             }
         }
