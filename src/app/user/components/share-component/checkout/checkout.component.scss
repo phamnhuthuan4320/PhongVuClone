@@ -1,11 +1,49 @@
+.breakcrum {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin: 15px 50px;
+
+    a {
+        text-decoration: none;
+        color: black;
+
+        .home {
+            height: 35px;
+            background-color: white;
+            width: 35px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            margin-right: 10px;
+            border: 1px solid rgb(190, 190, 190);
+        }
+    }
+
+    .lv1 {
+        height: 32px;
+        border-radius: 17.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8em;
+        padding: 0px 15px;
+        margin-left: 10px;
+        border: 1px solid rgb(190, 190, 190);
+        background-color: white;
+    }
+}
+
 .wrap {
-    padding: 15px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
 
     .section {
         display: grid;
         grid-template-columns: 2fr 1.25fr;
         gap: 15px;
-        margin: 20px 50px;
+        margin: 0px 50px;
 
         .prod {
             width: 100%;
@@ -244,6 +282,7 @@
                 background-color: white;
                 padding: 15px;
                 border-radius: 10px;
+                margin-bottom: 15px;
 
                 .btn {
                     width: 100%;

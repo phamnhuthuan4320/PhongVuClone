@@ -9,6 +9,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { NgxStripeModule } from 'ngx-stripe';
+import { ShareModule } from './share/share.module';
 
 //Pipes
 import { ProdsNamePipe } from './public/pipes/prods-name.pipe';
@@ -18,10 +19,6 @@ import { ProdsNamePipe } from './public/pipes/prods-name.pipe';
 
 //Components
 import { AppComponent } from './app.component';
-//share
-import { HeaderComponent } from './share/header/header.component';
-import { FooterComponent } from './share/footer/footer.component';
-import { LoaderComponent } from './share/loader/loader.component';
 //public
 import { PublicComponent } from './public/components/public/public.component';
 import { ProductDetailComponent } from './public/components/share-components/product-detail/product-detail.component';
@@ -32,7 +29,6 @@ import { ProdFrameComponent } from './public/components/share-components/prod-fr
 import { BannerComponent } from './public/components/share-components/banner/banner.component';
 import { SquareComponent } from './public/components/share-components/square/square.component';
 import { ProdPagiComponent } from './public/components/share-components/prod-pagi/prod-pagi.component';
-import { PdBarComponent } from './share/pd-bar/pd-bar.component';
 //user
 import { UserComponent } from './user/components/user/user.component';
 import { CartComponent } from './user/components/share-component/cart/cart.component';
@@ -47,8 +43,6 @@ import { StripeComponent } from './user/components/share-component/stripe/stripe
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
     PublicComponent,
     SliderComponent,
     TabComponent,
@@ -58,7 +52,6 @@ import { StripeComponent } from './user/components/share-component/stripe/stripe
     BannerComponent,
     SquareComponent,
     ProdPagiComponent,
-    PdBarComponent,
     ProductDetailComponent,
     UserComponent,
     LoginComponent,
@@ -66,7 +59,6 @@ import { StripeComponent } from './user/components/share-component/stripe/stripe
     OrderComponent,
     PageComponent,
     SignupComponent,
-    LoaderComponent,
     CheckoutComponent,
     AddressesComponent,
     StripeComponent
@@ -82,6 +74,7 @@ import { StripeComponent } from './user/components/share-component/stripe/stripe
     BrowserAnimationsModule,
     MatButtonModule,
     NgxStripeModule.forRoot('pk_test_51KxEc0JsyzcmxeMthvDJvy8lLHbDXIU3uggTgPC4oXvUDwL1DNt7srJwYKzzJyG7NLDv9MjprFy7DZPgoHxieMaS00tFsI8FNI'),
+    ShareModule
   ],
   providers: [],
   bootstrap: [AppComponent]

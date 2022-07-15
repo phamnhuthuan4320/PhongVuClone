@@ -1,18 +1,26 @@
 <div class="wrap">
+    <app-loader *ngIf="isLoading"></app-loader>
+    <div class="breakcrum">
+        <a [routerLink]="['']">
+            <div class="home"><i class="fa fa-home" aria-hidden="true"></i></div>
+        </a>
+        >
+        <div class="lv1">Orders</div>
+    </div>
     <div class="div">
         <div class="titleDiv">
             <div class="id">#</div>
             <div class="name">Name</div>
             <div class="add">Address</div>
             <div class="price">Total price</div>
-            <div class="date">Date create</div>
+            <div class="date">Create date</div>
         </div>
-        <div class="orderDiv" *ngFor="let item of orders.data, let index = index">
-            <div class="id">{{index}}</div>
-            <div class="name">Thuan</div>
-            <div class="add">HCM City</div>
-            <div class="price">400</div>
-            <div class="date">25/2</div>
+        <div class="orderDiv" *ngFor="let order of orders.data, let index = index">
+            <div class="id">{{index + 1}}</div>
+            <div class="name">{{order.address.fullName}}</div>
+            <div class="add">{{order.address.fullAddress}}</div>
+            <div class="price">$AUD {{order.totalPrice}}</div>
+            <div class="date">{{order.createdAt |date: 'dd/MM/yyyy'}}</div>
         </div>
     </div>
 </div>

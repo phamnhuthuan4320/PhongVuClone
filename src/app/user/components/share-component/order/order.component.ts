@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { orders } from 'src/app/user/models/orders.class';
 import { OrderService } from 'src/app/user/services/order.service';
 
 @Component({
@@ -9,7 +8,7 @@ import { OrderService } from 'src/app/user/services/order.service';
 })
 export class OrderComponent implements OnInit {
 
-  orders: orders = new orders('','','','', null);
+  orders: any;
   isLoading: boolean = false;
 
   constructor(private _order: OrderService) { }
@@ -19,6 +18,8 @@ export class OrderComponent implements OnInit {
 
     this._order.getOrders().subscribe(data => {
       this.orders = data;
+
+      this.isLoading = false;
     })
   }
 

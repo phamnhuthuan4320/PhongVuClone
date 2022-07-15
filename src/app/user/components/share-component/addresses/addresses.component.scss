@@ -1,7 +1,45 @@
+.breakcrum {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin: 15px 20%;
+
+    a {
+        text-decoration: none;
+        color: black;
+
+        .home {
+            height: 35px;
+            background-color: white;
+            width: 35px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            margin-right: 10px;
+            border: 1px solid rgb(190, 190, 190);
+        }
+    }
+
+    .lv1 {
+        height: 32px;
+        border-radius: 17.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8em;
+        padding: 0px 15px;
+        margin-left: 10px;
+        border: 1px solid rgb(190, 190, 190);
+        background-color: white;
+    }
+}
+
 .wrap {
     background-color: white;
     border-radius: 10px;
-    margin: 30px 25%;
+    margin: 0px 20% 15px 20%;
     padding: 15px;
 
     .text {

@@ -16,6 +16,8 @@ export class CheckoutComponent implements OnInit {
 
   chooseCart: any[] = [];
   chooseValue: any[] = [];
+  cartProds: any[] = [];
+  value: any[] = [];
   provisPrice: number = 0;
   totalPrice: number = 0;
   deliPrice: number = 10;
@@ -231,6 +233,9 @@ export class CheckoutComponent implements OnInit {
 
     this._order.postOrder(this.orderInfo).subscribe(data => {
       this._router.navigate(['']);
+
+      localStorage.removeItem('chooseCart');
+      localStorage.removeItem('chooseValue');
 
       this.isLoading = false;
     })
